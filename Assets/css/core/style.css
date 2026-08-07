@@ -1,0 +1,451 @@
+/*==========================================================
+                    EDUVERSE DESIGN SYSTEM
+==========================================================*/
+
+:root{
+
+    /*======================================
+                BRAND COLORS
+    ======================================*/
+
+    --primary-color:#7C3AED;
+    --secondary-color:#38BDF8;
+
+    --primary-light:#A855F7;
+    --secondary-light:#67E8F9;
+
+    /*======================================
+                BACKGROUND COLORS
+    ======================================*/
+
+    --background-color:#080B14;
+    --sidebar-color:#111827;
+    --header-color:#151E30;
+    --card-color:#1B2338;
+
+    /* Glassmorphism */
+
+    --glass-bg:rgba(255,255,255,.03);
+    --glass-bg-hover:rgba(255,255,255,.06);
+
+    /*======================================
+                TEXT COLORS
+    ======================================*/
+
+    --white:#FFFFFF;
+
+    --text-color:#D6DBF5;
+
+    --paragraph:#94A3B8;
+
+    --heading-color:#F8FAFC;
+
+    /*======================================
+                BORDER COLORS
+    ======================================*/
+
+    --border-color:#2B355A;
+
+    --glass-border:rgba(255,255,255,.08);
+
+    --glass-border-hover:rgba(124,58,237,.30);
+
+    /*======================================
+                SHADOWS
+    ======================================*/
+
+    --shadow:
+
+        0 15px 40px rgba(0,0,0,.35);
+
+    --shadow-lg:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+    --primary-glow:
+
+        0 0 30px rgba(124,58,237,.25);
+
+    --secondary-glow:
+
+        0 0 30px rgba(56,189,248,.25);
+
+    /*======================================
+                BORDER RADIUS
+    ======================================*/
+
+    --radius:22px;
+
+    --radius-sm:12px;
+
+    --radius-lg:30px;
+
+    --radius-round:50px;
+
+    /*======================================
+                TRANSITIONS
+    ======================================*/
+
+    --transition:.35s ease;
+
+    --transition-slow:.5s ease;
+
+    --transition-fast:.25s ease;
+
+    /*======================================
+                TYPOGRAPHY
+    ======================================*/
+
+    --font-family:
+
+        "Poppins",
+
+        "Segoe UI",
+
+        sans-serif;
+
+    /*======================================
+                SPACING
+    ======================================*/
+
+    --space-xs:8px;
+
+    --space-sm:16px;
+
+    --space-md:24px;
+
+    --space-lg:40px;
+
+    --space-xl:70px;
+
+}
+
+
+/*==========================================================
+                    GLOBAL RESET
+==========================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    scroll-behavior:smooth;
+
+}
+
+html{
+
+    overflow-x:hidden;
+
+}
+
+ body{
+
+    font-family:var(--font-family);
+
+    background:var(--background-color);
+
+    color:var(--text-color);
+
+    overflow-x:hidden;
+
+    line-height:1.6;
+
+} 
+ 
+
+
+/*==========================================================
+                    ELEMENTS
+==========================================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input,
+
+textarea,
+
+select{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+
+/*==========================================================
+                    SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background-color);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        var(--primary-color),
+
+        var(--secondary-color)
+
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-color);
+
+}
+
+
+/*==========================================================
+                    COMMON UTILITIES
+==========================================================*/
+
+.container{
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+}
+
+.gradient-text{
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary-color),
+
+        var(--secondary-color)
+
+    );
+
+    background-size:250%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 5s linear infinite;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:var(--radius-round);
+
+    background:rgba(124,58,237,.10);
+
+    border:1px solid rgba(124,58,237,.20);
+
+    color:var(--secondary-color);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.section-title{
+
+    font-size:48px;
+
+    color:var(--heading-color);
+
+    margin-top:20px;
+
+}
+
+.section-description{
+
+    color:var(--paragraph);
+
+    max-width:750px;
+
+    margin:18px auto 0;
+
+    line-height:1.9;
+
+}
+
+
+/*==========================================================
+                    MAIN CONTENT
+==========================================================*/
+
+.main-content{
+
+    margin-left:310px;
+
+    margin-top:105px;
+
+    padding:20px;
+
+    transition:var(--transition);
+
+}
+
+.sidebar.collapsed ~ .main-content{
+
+    margin-left:125px;
+
+}
+
+
+/*==========================================================
+                    ANIMATIONS
+==========================================================*/
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:250%;
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.page-container{
+
+    width:100%;
+
+    max-width:1500px;
+
+    margin:0 auto;
+
+}
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:992px){
+
+.main-content{
+
+    margin-left:95px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.main-content{
+
+    margin-left:310px;
+    margin-top:105px;
+
+    padding:20px 40px;
+
+    width:calc(100% - 310px);
+
+}
+
+.section-title{
+
+    font-size:34px;
+
+}
+
+}

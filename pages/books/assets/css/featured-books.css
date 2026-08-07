@@ -1,0 +1,392 @@
+/*=========================================================
+                FEATURED BOOKS SECTION
+=========================================================*/
+
+.featured-books{
+
+    margin:90px 0;
+
+}
+
+
+/*=========================================================
+                    BOOK GRID
+=========================================================*/
+
+.books-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+
+    gap:30px;
+
+}
+
+
+/*=========================================================
+                    BOOK CARD
+=========================================================*/
+
+.book-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.03));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+}
+
+.book-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(94,92,230,.45);
+
+    box-shadow:
+    0 22px 55px rgba(94,92,230,.25);
+
+}
+
+
+/*=========================================================
+                    BOOK IMAGE
+=========================================================*/
+
+.book-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:340px;
+
+    overflow:hidden;
+
+}
+
+.book-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.book-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*=========================================================
+                    BADGES
+=========================================================*/
+
+.book-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    color:#fff;
+
+    background:#5e5ce6;
+
+}
+
+.book-wishlist{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.book-wishlist:hover{
+
+    background:#ff4f81;
+
+}
+
+
+/*=========================================================
+                    CONTENT
+=========================================================*/
+
+.book-content{
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.book-category{
+
+    color:#7f8cff;
+
+    font-size:.9rem;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.book-title{
+
+    color:#fff;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    margin-bottom:12px;
+
+}
+
+.book-author{
+
+    color:#9fb0c8;
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
+
+}
+
+
+/*=========================================================
+                    RATING
+=========================================================*/
+
+.book-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-bottom:22px;
+
+}
+
+.book-rating i{
+
+    color:#FFD54A;
+
+}
+
+.book-rating span{
+
+    color:#c9d3e4;
+
+}
+
+
+/*=========================================================
+                    PRICE
+=========================================================*/
+
+.book-price{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.current-price{
+
+    color:#ffffff;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+.old-price{
+
+    color:#7687a3;
+
+    text-decoration:line-through;
+
+}
+
+
+/*=========================================================
+                    BUTTONS
+=========================================================*/
+
+.book-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.book-actions a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:13px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.details-btn{
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+}
+
+.details-btn:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.cart-btn{
+
+    background:linear-gradient(135deg,#5e5ce6,#7c3aed);
+
+    color:#fff;
+
+}
+
+.cart-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 30px rgba(94,92,230,.35);
+
+}
+
+
+/*=========================================================
+                    RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.books-grid{
+
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+
+}
+
+}
+
+@media(max-width:768px){
+
+.book-image{
+
+    height:300px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.books-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.book-image{
+
+    height:280px;
+
+}
+
+.book-actions{
+
+    flex-direction:column;
+
+}
+
+}

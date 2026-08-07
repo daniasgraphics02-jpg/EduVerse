@@ -1,0 +1,467 @@
+/*=========================================
+            SUCCESS STORIES
+=========================================*/
+
+.success-stories{
+
+    margin-top:120px;
+
+}
+
+
+/*=========================================
+            SECTION HEADER
+=========================================*/
+
+.stories-header{
+
+    max-width:850px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.stories-header h2{
+
+    font-size:46px;
+
+    color:#fff;
+
+    margin:20px 0;
+
+    line-height:1.2;
+
+}
+
+.stories-header p{
+
+    color:#94A3B8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================================
+            GRID
+=========================================*/
+
+.stories-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+/*=========================================
+            CARD
+=========================================*/
+
+.story-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+
+/* Glow */
+
+.story-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-170px;
+
+    right:-150px;
+
+    background:
+
+    radial-gradient(
+
+        rgba(124,58,237,.20),
+
+        transparent 70%
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.story-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+/*=========================================
+            TOP
+=========================================*/
+
+.story-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:28px;
+
+}
+
+.story-top img{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #7C3AED;
+
+}
+
+.story-top h3{
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-bottom:4px;
+
+}
+
+.story-top span{
+
+    color:#38BDF8;
+
+    font-size:15px;
+
+}
+
+
+/*=========================================
+            SALARY BOX
+=========================================*/
+
+.salary-box{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-bottom:25px;
+
+}
+
+.salary-box h4{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+.salary-progress{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.salary-progress span{
+
+    font-weight:700;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.salary-after{
+
+    color:#38BDF8 !important;
+
+}
+
+.salary-progress i{
+
+    font-size:26px;
+
+    color:#7C3AED;
+
+}
+
+/*=========================================
+            INFO ROW
+=========================================*/
+
+.story-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.story-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+.story-info i{
+
+    color:#38BDF8;
+
+    font-size:18px;
+
+}
+
+
+/*=========================================
+            BADGES
+=========================================*/
+
+.badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.badges span{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:rgba(124,58,237,.10);
+
+    border:1px solid rgba(124,58,237,.25);
+
+    color:#E2E8F0;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.story-card:hover .badges span{
+
+    background:rgba(56,189,248,.12);
+
+    border-color:#38BDF8;
+
+}
+
+
+/*=========================================
+            STORY TEXT
+=========================================*/
+
+.story-text{
+
+    color:#94A3B8;
+
+    line-height:1.9;
+
+    font-size:15px;
+
+    margin-bottom:30px;
+
+    min-height:95px;
+
+}
+
+
+/*=========================================
+            BUTTON
+=========================================*/
+
+.story-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #3B82F6
+    );
+
+    transition:.4s;
+
+}
+
+.story-btn i{
+
+    transition:.35s;
+
+}
+
+.story-card:hover .story-btn{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 15px 35px rgba(124,58,237,.35);
+
+}
+
+.story-card:hover .story-btn i{
+
+    transform:translateX(6px);
+
+}
+
+
+/*=========================================
+            CARD HOVER
+=========================================*/
+
+.story-card:hover{
+
+    transform:translateY(-14px);
+
+    border-color:#7C3AED;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35),
+
+    0 0 35px rgba(124,58,237,.20);
+
+}
+
+.story-card:hover img{
+
+    transform:scale(1.08);
+
+    transition:.45s;
+
+}
+
+.story-card:hover h3{
+
+    color:#38BDF8;
+
+}
+
+.stories-stats{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stories-stats div{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.stories-stats h3{
+
+    color:#38BDF8;
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+.stories-stats p{
+
+    color:#94A3B8;
+
+}

@@ -1,0 +1,2716 @@
+/*=========================================================
+                BOOK DETAILS PAGE
+                  HERO SECTION
+=========================================================*/
+
+
+/*=========================================================
+                BOOK HERO
+=========================================================*/
+
+.book-hero{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    position:relative;
+
+    margin:45px 0 80px;
+
+    padding:65px;
+
+    border-radius:32px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(59,130,246,.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111c35 55%,
+            #172554
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+
+/*=========================================================
+                HERO LIGHT EFFECT
+=========================================================*/
+
+.book-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-180px;
+
+    top:-220px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(56,189,248,.15),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+
+.book-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    left:-220px;
+
+    bottom:-250px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.12),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================================
+                BOOK COVER
+=========================================================*/
+
+.book-cover{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:340px;
+
+    margin:auto;
+
+}
+
+
+.book-cover img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.55),
+
+        0 10px 25px rgba(0,0,0,.25);
+
+    transition:
+
+        transform .4s ease,
+
+        box-shadow .4s ease;
+
+}
+
+
+.book-cover img:hover{
+
+    transform:
+
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+
+        0 40px 80px rgba(0,0,0,.65),
+
+        0 15px 35px rgba(59,130,246,.15);
+
+}
+
+
+/*=========================================================
+                BOOK INFORMATION
+=========================================================*/
+
+.book-info{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#fff;
+
+    max-width:800px;
+
+}
+
+
+/*=========================================================
+                CATEGORY
+=========================================================*/
+
+.book-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 16px;
+
+    margin-bottom:20px;
+
+    border-radius:30px;
+
+    background:rgba(59,130,246,.12);
+
+    border:1px solid rgba(59,130,246,.3);
+
+    color:#60a5fa;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+}
+
+
+/*=========================================================
+                TITLE
+=========================================================*/
+
+.book-info h1{
+
+    margin:0 0 15px;
+
+    color:#fff;
+
+    font-size:clamp(
+        2.2rem,
+        4vw,
+        3.6rem
+    );
+
+    line-height:1.15;
+
+    font-weight:750;
+
+    letter-spacing:-1px;
+
+}
+
+
+/*=========================================================
+                AUTHOR
+=========================================================*/
+
+.book-author{
+
+    margin:0 0 20px;
+
+    color:#aeb8c7;
+
+    font-size:1.05rem;
+
+    line-height:1.6;
+
+}
+
+
+.book-author strong{
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================================
+                RATING
+=========================================================*/
+
+.book-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+
+.rating-stars{
+
+    color:#facc15;
+
+    font-size:1.15rem;
+
+    letter-spacing:2px;
+
+}
+
+
+.rating-number{
+
+    color:#dbeafe;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================================
+                PRICE
+=========================================================*/
+
+.book-price{
+
+    margin-bottom:14px;
+
+    color:#38bdf8;
+
+    font-size:2.1rem;
+
+    font-weight:750;
+
+    letter-spacing:-.5px;
+
+}
+
+
+/*=========================================================
+                STOCK
+=========================================================*/
+
+.book-stock{
+
+    margin-bottom:24px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+
+.in-stock{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#4ade80;
+
+}
+
+
+.out-stock{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#f87171;
+
+}
+
+
+/*=========================================================
+                DESCRIPTION
+=========================================================*/
+
+.book-description{
+
+    max-width:720px;
+
+    margin-bottom:32px;
+
+    color:#cbd5e1;
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+
+/*=========================================================
+                ACTION BUTTONS
+=========================================================*/
+
+.book-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/*=========================================================
+                ALL ACTION BUTTONS
+=========================================================*/
+
+.cart-btn,
+
+.buy-btn,
+
+.wishlist-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    min-height:50px;
+
+    padding:13px 23px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    font-weight:650;
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease,
+
+        border-color .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+
+/*=========================================================
+                ADD TO CART
+=========================================================*/
+
+.cart-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:1px solid #2563eb;
+
+}
+
+
+.cart-btn:hover{
+
+    background:#1d4ed8;
+
+    border-color:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 10px 25px rgba(37,99,235,.25);
+
+}
+
+
+/*=========================================================
+                BUY NOW
+=========================================================*/
+
+.buy-btn{
+
+    background:#22c55e;
+
+    color:#fff;
+
+    border:1px solid #22c55e;
+
+}
+
+
+.buy-btn:hover{
+
+    background:#16a34a;
+
+    border-color:#16a34a;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 10px 25px rgba(34,197,94,.22);
+
+}
+
+
+/*=========================================================
+                WISHLIST
+=========================================================*/
+
+.wishlist-btn{
+
+    background:rgba(255,255,255,.04);
+
+    color:#e5e7eb;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+.wishlist-btn:hover{
+
+    background:rgba(239,68,68,.10);
+
+    border-color:rgba(248,113,113,.4);
+
+    color:#f87171;
+
+    transform:translateY(-3px);
+
+}
+
+
+/*=========================================================
+                HERO RESPONSIVE
+=========================================================*/
+
+@media(max-width:1100px){
+
+    .book-hero{
+
+        grid-template-columns:290px 1fr;
+
+        gap:50px;
+
+        padding:50px;
+
+    }
+
+}
+
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:850px){
+
+    .book-hero{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+        padding:45px 35px;
+
+        text-align:center;
+
+    }
+
+
+    .book-cover{
+
+        max-width:280px;
+
+    }
+
+
+    .book-info{
+
+        max-width:750px;
+
+        margin:auto;
+
+    }
+
+
+    .book-category{
+
+        justify-content:center;
+
+    }
+
+
+    .book-rating{
+
+        justify-content:center;
+
+    }
+
+
+    .book-actions{
+
+        justify-content:center;
+
+    }
+
+
+    .book-description{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+}
+
+
+/*=========================================================
+                MOBILE
+=========================================================*/
+
+@media(max-width:600px){
+
+    .book-hero{
+
+        margin:25px 0 55px;
+
+        padding:35px 22px;
+
+        border-radius:24px;
+
+    }
+
+
+    .book-cover{
+
+        max-width:230px;
+
+    }
+
+
+    .book-info h1{
+
+        font-size:2rem;
+
+        letter-spacing:-.5px;
+
+    }
+
+
+    .book-author{
+
+        font-size:.95rem;
+
+    }
+
+
+    .book-price{
+
+        font-size:1.8rem;
+
+    }
+
+
+    .book-description{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .book-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+    .cart-btn,
+
+    .buy-btn,
+
+    .wishlist-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/*=========================================================
+                COMMON CONTENT SECTIONS
+=========================================================*/
+
+.about-book,
+.what-you-learn,
+.book-information{
+
+    margin:80px 0;
+
+}
+
+
+/*=========================================================
+                SECTION TITLE
+=========================================================*/
+
+.section-title{
+
+    margin-bottom:32px;
+
+}
+
+
+.section-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:10px;
+
+    color:#60a5fa;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    text-transform:uppercase;
+
+}
+
+
+.section-title h2{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:2rem;
+
+    line-height:1.3;
+
+    font-weight:700;
+
+}
+
+
+/*=========================================================
+                SECTION DIVIDER
+=========================================================*/
+
+.about-book::after,
+.what-you-learn::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:1px;
+
+    margin-top:70px;
+
+    background:
+
+        linear-gradient(
+            to right,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+}
+
+
+/*=========================================================
+                ABOUT THIS BOOK
+=========================================================*/
+
+.about-content{
+
+    max-width:900px;
+
+    padding-left:24px;
+
+    border-left:3px solid #2563eb;
+
+    color:#cbd5e1;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+}
+
+
+.about-content p{
+
+    margin:0;
+
+}
+
+
+/*=========================================================
+                WHAT YOU'LL LEARN
+=========================================================*/
+
+.learn-list{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap:70px;
+
+    row-gap:0;
+
+    max-width:1000px;
+
+}
+
+
+.learn-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:18px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.learn-item i{
+
+    flex-shrink:0;
+
+    margin-top:3px;
+
+    color:#22c55e;
+
+    font-size:1.05rem;
+
+}
+
+
+.learn-item span{
+
+    color:#d1d5db;
+
+    font-size:.98rem;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================================
+                BOOK INFORMATION
+=========================================================*/
+
+.book-specifications{
+
+    max-width:1000px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+}
+
+
+.spec-row{
+
+    display:grid;
+
+    grid-template-columns:
+        240px 1fr;
+
+    align-items:center;
+
+    min-height:65px;
+
+    padding:12px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.spec-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:#94a3b8;
+
+    font-size:.95rem;
+
+}
+
+
+.spec-label i{
+
+    width:20px;
+
+    color:#60a5fa;
+
+    font-size:1rem;
+
+}
+
+
+.spec-row strong{
+
+    color:#f1f5f9;
+
+    font-size:.98rem;
+
+    font-weight:600;
+
+}
+
+
+.spec-rating{
+
+    color:#facc15 !important;
+
+}
+
+
+/*=========================================================
+                CONTENT RESPONSIVE
+=========================================================*/
+
+@media(max-width:850px){
+
+    .about-book,
+    .what-you-learn,
+    .book-information{
+
+        margin:65px 0;
+
+    }
+
+
+    .learn-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .spec-row{
+
+        grid-template-columns:
+            190px 1fr;
+
+    }
+
+}
+
+
+/*=========================================================
+                MOBILE
+=========================================================*/
+
+@media(max-width:600px){
+
+    .about-book,
+    .what-you-learn,
+    .book-information{
+
+        margin:55px 0;
+
+    }
+
+
+    .section-title{
+
+        margin-bottom:25px;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:1.55rem;
+
+    }
+
+
+    .section-label{
+
+        font-size:.78rem;
+
+    }
+
+
+    .about-content{
+
+        padding-left:18px;
+
+        font-size:.95rem;
+
+        line-height:1.85;
+
+    }
+
+
+    .learn-item{
+
+        padding:15px 0;
+
+    }
+
+
+    .learn-item span{
+
+        font-size:.92rem;
+
+    }
+
+
+    .spec-row{
+
+        grid-template-columns:1fr;
+
+        gap:7px;
+
+        padding:16px 0;
+
+    }
+
+
+    .spec-label{
+
+        font-size:.85rem;
+
+    }
+
+
+    .spec-row strong{
+
+        padding-left:31px;
+
+        font-size:.94rem;
+
+    }
+
+
+    .about-book::after,
+    .what-you-learn::after{
+
+        margin-top:55px;
+
+    }
+
+}
+
+/*=========================================================
+                CUSTOMER REVIEWS
+=========================================================*/
+
+.customer-reviews{
+
+    margin:80px 0;
+
+}
+
+
+/*=========================================================
+                REVIEW SUMMARY
+=========================================================*/
+
+.review-summary{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+
+    padding:28px 0;
+
+    margin-bottom:30px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.review-score{
+
+    min-width:150px;
+
+    text-align:center;
+
+}
+
+
+.review-score strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:2.8rem;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+
+.summary-stars{
+
+    color:#facc15;
+
+    font-size:1.1rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+
+}
+
+
+.review-score span{
+
+    color:#94a3b8;
+
+    font-size:.85rem;
+
+}
+
+
+.review-summary-text{
+
+    max-width:650px;
+
+}
+
+
+.review-summary-text p{
+
+    margin:0 0 15px;
+
+    color:#aeb8c7;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================================
+                WRITE REVIEW BUTTON
+=========================================================*/
+
+.write-review-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:rgba(59,130,246,.1);
+
+    border:1px solid rgba(59,130,246,.3);
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+
+.write-review-btn:hover{
+
+    background:#2563eb;
+
+    border-color:#2563eb;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+
+/*=========================================================
+                REVIEWS LIST
+=========================================================*/
+
+.reviews-list{
+
+    max-width:1000px;
+
+}
+
+
+.review-item{
+
+    padding:28px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.review-item:first-child{
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.review-header{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    margin-bottom:12px;
+
+}
+
+
+.review-header h3{
+
+    margin:0 0 5px;
+
+    color:#f8fafc;
+
+    font-size:1.05rem;
+
+    font-weight:650;
+
+}
+
+
+.review-author{
+
+    color:#64748b;
+
+    font-size:.85rem;
+
+}
+
+
+.review-stars{
+
+    flex-shrink:0;
+
+    color:#facc15;
+
+    font-size:.95rem;
+
+    letter-spacing:1px;
+
+}
+
+
+.review-item > p{
+
+    max-width:850px;
+
+    margin:0;
+
+    color:#b9c3d0;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================================================
+                RELATED BOOKS
+=========================================================*/
+
+.related-books{
+
+    margin:90px 0;
+
+}
+
+
+.related-books-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:24px;
+
+}
+
+
+/*=========================================================
+                RELATED BOOK CARD
+=========================================================*/
+
+.related-book-card{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#111827;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.related-book-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:
+        rgba(59,130,246,.45);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.3);
+
+}
+
+
+/*=========================================================
+                RELATED BOOK IMAGE
+=========================================================*/
+
+.related-book-image{
+
+    display:block;
+
+    height:300px;
+
+    overflow:hidden;
+
+    background:#0b1120;
+
+}
+
+
+.related-book-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease;
+
+}
+
+
+.related-book-card:hover
+.related-book-image img{
+
+    transform:scale(1.04);
+
+}
+
+
+/*=========================================================
+                RELATED BOOK CONTENT
+=========================================================*/
+
+.related-book-content{
+
+    padding:20px;
+
+}
+
+
+.related-category{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#60a5fa;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+
+.related-book-content h3{
+
+    margin:0 0 8px;
+
+    color:#f8fafc;
+
+    font-size:1.05rem;
+
+    line-height:1.4;
+
+}
+
+
+.related-book-content p{
+
+    margin:0 0 18px;
+
+    color:#94a3b8;
+
+    font-size:.88rem;
+
+}
+
+
+.related-book-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+
+.related-book-bottom strong{
+
+    color:#38bdf8;
+
+    font-size:1.05rem;
+
+}
+
+
+.related-details-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+
+.related-details-btn:hover{
+
+    color:#93c5fd;
+
+    gap:9px;
+
+}
+
+
+/*=========================================================
+                NO RELATED BOOKS
+=========================================================*/
+
+.no-related-books{
+
+    grid-column:1 / -1;
+
+    padding:30px 0;
+
+    color:#94a3b8;
+
+    text-align:center;
+
+}
+
+
+/*=========================================================
+                RECOMMENDED COURSE
+=========================================================*/
+
+.recommended-course{
+
+    margin:90px 0 70px;
+
+}
+
+
+.course-content{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:55px 60px;
+
+    border-radius:28px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(56,189,248,.16),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #111827 70%
+        );
+
+    border:
+        1px solid rgba(96,165,250,.2);
+
+}
+
+
+/*=========================================================
+                COURSE BACKGROUND GLOW
+=========================================================*/
+
+.course-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    right:-100px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:
+        rgba(59,130,246,.12);
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================================
+                COURSE TEXT
+=========================================================*/
+
+.course-text{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+
+
+.course-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:7px 15px;
+
+    margin-bottom:18px;
+
+    border-radius:30px;
+
+    background:rgba(56,189,248,.15);
+
+    border:
+        1px solid rgba(56,189,248,.25);
+
+    color:#7dd3fc;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+}
+
+
+.course-text h2{
+
+    margin:0 0 15px;
+
+    color:#fff;
+
+    font-size:2.15rem;
+
+    line-height:1.25;
+
+}
+
+
+.course-text p{
+
+    max-width:650px;
+
+    margin:0 0 28px;
+
+    color:#dbeafe;
+
+    font-size:1rem;
+
+    line-height:1.85;
+
+}
+
+
+/*=========================================================
+                COURSE BUTTON
+=========================================================*/
+
+.course-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 24px;
+
+    border-radius:11px;
+
+    background:#fff;
+
+    color:#1d4ed8;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.course-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+
+}
+
+
+/*=========================================================
+                COURSE ICON
+=========================================================*/
+
+.course-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    flex-shrink:0;
+
+    font-size:8rem;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.12);
+
+}
+
+
+/*=========================================================
+                REVIEWS RESPONSIVE
+=========================================================*/
+
+@media(max-width:850px){
+
+    .review-summary{
+
+        align-items:flex-start;
+
+        gap:30px;
+
+    }
+
+
+    .related-books-grid{
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .course-content{
+
+        padding:45px;
+
+        gap:35px;
+
+    }
+
+
+    .course-text h2{
+
+        font-size:1.9rem;
+
+    }
+
+
+    .course-icon{
+
+        font-size:6rem;
+
+    }
+
+}
+
+
+/*=========================================================
+                MOBILE
+=========================================================*/
+
+@media(max-width:600px){
+
+    .customer-reviews,
+    .related-books,
+    .recommended-course{
+
+        margin:60px 0;
+
+    }
+
+
+    .review-summary{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+        padding:25px 0;
+
+    }
+
+
+    .review-score{
+
+        text-align:left;
+
+    }
+
+
+    .review-score strong{
+
+        font-size:2.4rem;
+
+    }
+
+
+    .review-header{
+
+        flex-direction:column;
+
+        gap:8px;
+
+    }
+
+
+    .review-item{
+
+        padding:23px 0;
+
+    }
+
+
+    .related-books-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .related-book-image{
+
+        height:340px;
+
+    }
+
+
+    .course-content{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:38px 25px;
+
+        border-radius:22px;
+
+    }
+
+
+    .course-text h2{
+
+        font-size:1.65rem;
+
+    }
+
+
+    .course-text p{
+
+        font-size:.93rem;
+
+    }
+
+
+    .course-icon{
+
+        display:none;
+
+    }
+
+}
+
+
+/*=========================================================
+                PAGE CONTAINER
+=========================================================*/
+
+.page-container{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:0 30px;
+
+}
+
+
+/*=========================================================
+                GENERAL IMAGE PROTECTION
+=========================================================*/
+
+.book-details-page img{
+
+    max-width:100%;
+
+}
+
+
+/*=========================================================
+                SECTION SPACING
+=========================================================*/
+
+.about-book,
+.what-you-learn,
+.book-information,
+.customer-reviews,
+.related-books,
+.recommended-course{
+
+    position:relative;
+
+}
+
+
+/*=========================================================
+                HEADINGS RESET
+=========================================================*/
+
+.about-book h1,
+.about-book h2,
+.about-book h3,
+
+.what-you-learn h1,
+.what-you-learn h2,
+.what-you-learn h3,
+
+.book-information h1,
+.book-information h2,
+.book-information h3,
+
+.customer-reviews h1,
+.customer-reviews h2,
+.customer-reviews h3,
+
+.related-books h1,
+.related-books h2,
+.related-books h3,
+
+.recommended-course h1,
+.recommended-course h2,
+.recommended-course h3{
+
+    margin-top:0;
+
+}
+
+
+/*=========================================================
+                LINKS
+=========================================================*/
+
+.book-details-page a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/*=========================================================
+                BUTTON FOCUS
+=========================================================*/
+
+.cart-btn:focus-visible,
+.buy-btn:focus-visible,
+.wishlist-btn:focus-visible,
+.course-btn:focus-visible,
+.write-review-btn:focus-visible,
+.related-details-btn:focus-visible{
+
+    outline:2px solid #60a5fa;
+
+    outline-offset:3px;
+
+}
+
+
+/*=========================================================
+                HERO — LARGE DESKTOP
+=========================================================*/
+
+@media(min-width:1400px){
+
+    .book-hero{
+
+        padding:75px;
+
+        grid-template-columns:360px 1fr;
+
+        gap:80px;
+
+    }
+
+
+    .book-info h1{
+
+        font-size:3.8rem;
+
+    }
+
+}
+
+
+/*=========================================================
+                LAPTOP
+=========================================================*/
+
+@media(max-width:1200px){
+
+    .page-container{
+
+        padding:0 25px;
+
+    }
+
+
+    .book-hero{
+
+        grid-template-columns:300px 1fr;
+
+        gap:50px;
+
+        padding:50px;
+
+    }
+
+
+    .related-books-grid{
+
+        grid-template-columns:
+            repeat(3, minmax(0,1fr));
+
+    }
+
+}
+
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:991px){
+
+    .page-container{
+
+        padding:0 22px;
+
+    }
+
+
+    .book-hero{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        padding:45px 35px;
+
+        text-align:center;
+
+    }
+
+
+    .book-cover{
+
+        width:280px;
+
+        max-width:100%;
+
+    }
+
+
+    .book-info{
+
+        width:100%;
+
+        max-width:760px;
+
+        margin:0 auto;
+
+    }
+
+
+    .book-category{
+
+        justify-content:center;
+
+    }
+
+
+    .book-rating{
+
+        justify-content:center;
+
+    }
+
+
+    .book-description{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .book-actions{
+
+        justify-content:center;
+
+    }
+
+
+    .learn-list{
+
+        column-gap:35px;
+
+    }
+
+
+    .related-books-grid{
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+
+    .course-content{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .course-icon{
+
+        position:absolute;
+
+        right:35px;
+
+        bottom:25px;
+
+    }
+
+}
+
+
+/*=========================================================
+                SMALL TABLET
+=========================================================*/
+
+@media(max-width:768px){
+
+    .page-container{
+
+        padding:0 18px;
+
+    }
+
+
+    .book-hero{
+
+        margin-top:30px;
+
+        margin-bottom:60px;
+
+        padding:40px 28px;
+
+        border-radius:25px;
+
+    }
+
+
+    .book-cover{
+
+        width:250px;
+
+    }
+
+
+    .book-info h1{
+
+        font-size:2.3rem;
+
+    }
+
+
+    .book-description{
+
+        font-size:.95rem;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:1.75rem;
+
+    }
+
+
+    .learn-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .spec-row{
+
+        grid-template-columns:200px 1fr;
+
+    }
+
+
+    .review-summary{
+
+        gap:30px;
+
+    }
+
+
+    .course-content{
+
+        padding:40px 30px;
+
+    }
+
+}
+
+
+/*=========================================================
+                MOBILE
+=========================================================*/
+
+@media(max-width:600px){
+
+    .page-container{
+
+        padding:0 15px;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    HERO
+    -----------------------------------------------------*/
+
+    .book-hero{
+
+        margin:20px 0 50px;
+
+        padding:32px 20px;
+
+        gap:30px;
+
+        border-radius:22px;
+
+    }
+
+
+    .book-cover{
+
+        width:210px;
+
+    }
+
+
+    .book-cover img{
+
+        border-radius:14px;
+
+    }
+
+
+    .book-info h1{
+
+        font-size:1.9rem;
+
+        line-height:1.25;
+
+    }
+
+
+    .book-author{
+
+        font-size:.9rem;
+
+    }
+
+
+    .book-rating{
+
+        gap:8px;
+
+    }
+
+
+    .rating-stars{
+
+        font-size:1rem;
+
+    }
+
+
+    .book-price{
+
+        font-size:1.7rem;
+
+    }
+
+
+    .book-description{
+
+        font-size:.92rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .book-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:10px;
+
+    }
+
+
+    .cart-btn,
+    .buy-btn,
+    .wishlist-btn{
+
+        width:100%;
+
+        min-height:48px;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    SECTIONS
+    -----------------------------------------------------*/
+
+    .about-book,
+    .what-you-learn,
+    .book-information,
+    .customer-reviews,
+    .related-books,
+    .recommended-course{
+
+        margin:55px 0;
+
+    }
+
+
+    .section-title{
+
+        margin-bottom:22px;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:1.5rem;
+
+    }
+
+
+    .section-label{
+
+        font-size:.75rem;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    ABOUT
+    -----------------------------------------------------*/
+
+    .about-content{
+
+        padding-left:16px;
+
+        font-size:.93rem;
+
+        line-height:1.85;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    LEARNING LIST
+    -----------------------------------------------------*/
+
+    .learn-item{
+
+        gap:12px;
+
+        padding:14px 0;
+
+    }
+
+
+    .learn-item span{
+
+        font-size:.9rem;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    BOOK INFORMATION
+    -----------------------------------------------------*/
+
+    .spec-row{
+
+        display:block;
+
+        padding:15px 0;
+
+    }
+
+
+    .spec-label{
+
+        margin-bottom:7px;
+
+    }
+
+
+    .spec-row strong{
+
+        display:block;
+
+        padding-left:31px;
+
+        font-size:.92rem;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    REVIEWS
+    -----------------------------------------------------*/
+
+    .review-summary{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:22px 0;
+
+    }
+
+
+    .review-score{
+
+        min-width:0;
+
+        text-align:left;
+
+    }
+
+
+    .review-score strong{
+
+        font-size:2.2rem;
+
+    }
+
+
+    .review-header{
+
+        flex-direction:column;
+
+        gap:8px;
+
+    }
+
+
+    .review-stars{
+
+        font-size:.9rem;
+
+    }
+
+
+    .review-item > p{
+
+        font-size:.9rem;
+
+        line-height:1.75;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    RELATED BOOKS
+    -----------------------------------------------------*/
+
+    .related-books-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+
+    .related-book-image{
+
+        height:330px;
+
+    }
+
+
+    .related-book-content{
+
+        padding:18px;
+
+    }
+
+
+    /*-----------------------------------------------------
+                    COURSE
+    -----------------------------------------------------*/
+
+    .course-content{
+
+        padding:32px 22px;
+
+        border-radius:20px;
+
+    }
+
+
+    .course-text h2{
+
+        font-size:1.55rem;
+
+    }
+
+
+    .course-text p{
+
+        font-size:.9rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .course-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+
+    .course-icon{
+
+        display:none;
+
+    }
+
+}
+
+
+/*=========================================================
+                VERY SMALL MOBILE
+=========================================================*/
+
+@media(max-width:400px){
+
+    .page-container{
+
+        padding:0 12px;
+
+    }
+
+
+    .book-hero{
+
+        padding:28px 16px;
+
+    }
+
+
+    .book-cover{
+
+        width:185px;
+
+    }
+
+
+    .book-info h1{
+
+        font-size:1.7rem;
+
+    }
+
+
+    .book-price{
+
+        font-size:1.55rem;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:1.35rem;
+
+    }
+
+
+    .related-book-image{
+
+        height:290px;
+
+    }
+
+}
+
+
+/*=========================================================
+                REDUCED MOTION
+=========================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .book-cover img,
+    .cart-btn,
+    .buy-btn,
+    .wishlist-btn,
+    .related-book-card,
+    .related-book-image img,
+    .course-btn,
+    .write-review-btn{
+
+        transition:none;
+
+    }
+
+
+    .book-cover img:hover,
+    .cart-btn:hover,
+    .buy-btn:hover,
+    .wishlist-btn:hover,
+    .related-book-card:hover,
+    .related-book-card:hover
+    .related-book-image img,
+    .course-btn:hover,
+    .write-review-btn:hover{
+
+        transform:none;
+
+    }
+
+}

@@ -1,0 +1,213 @@
+ /*=========================================
+            FINAL CTA
+=========================================*/
+
+.final-cta{
+
+    margin:120px 0;
+
+}
+
+.cta-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:90px 60px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(124,58,237,.18),
+        rgba(59,130,246,.12)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+/* Glow */
+
+.cta-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(124,58,237,.28),
+
+        transparent 70%
+
+    );
+
+    left:-180px;
+
+    top:-150px;
+
+}
+
+
+.cta-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(56,189,248,.18),
+
+        transparent 70%
+
+    );
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+
+/*=========================================
+            TAG
+=========================================*/
+
+.cta-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(124,58,237,.12);
+
+    border:1px solid rgba(124,58,237,.25);
+
+    color:#38BDF8;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================
+            TITLE
+=========================================*/
+
+.cta-card h2{
+
+    margin-top:28px;
+
+    font-size:56px;
+
+    color:#fff;
+
+    line-height:1.2;
+
+}
+
+
+.cta-card p{
+
+    width:720px;
+
+    max-width:100%;
+
+    margin:25px auto 0;
+
+    color:#A5B4C7;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.cta-card{
+
+    padding:70px 35px;
+
+}
+
+.cta-card h2{
+
+    font-size:42px;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.cta-buttons{
+
+    flex-direction:column;
+
+}
+
+.cta-buttons a{
+
+    width:100%;
+
+}
+
+.cta-card h2{
+
+    font-size:34px;
+
+}
+}

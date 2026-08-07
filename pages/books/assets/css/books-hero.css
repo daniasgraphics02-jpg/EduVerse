@@ -1,0 +1,353 @@
+/*=========================================================
+                    BOOKS HERO SECTION
+=========================================================*/
+
+.books-hero{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+
+    margin:40px 0 90px;
+
+    padding:70px;
+
+    border-radius:32px;
+
+    background:
+        linear-gradient(135deg,
+        rgba(18,26,43,.96),
+        rgba(25,36,60,.92));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.books-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    background:rgba(94,92,230,.18);
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    top:-120px;
+    right:-120px;
+
+    pointer-events:none;
+
+}
+
+.books-hero-left{
+
+    flex:1;
+    max-width:650px;
+    z-index:2;
+
+}
+
+.books-hero h1{
+
+    font-size:3.4rem;
+
+    line-height:1.15;
+
+    margin:18px 0;
+
+    color:#ffffff;
+
+    font-weight:800;
+
+}
+
+.books-hero p{
+
+    color:#b6c2d9;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+    max-width:560px;
+
+}
+
+
+/*=========================================================
+                    SEARCH BAR
+=========================================================*/
+
+.books-search{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-top:35px;
+
+    max-width:600px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.books-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-size:1rem;
+
+    padding:18px 22px;
+
+}
+
+.books-search input::placeholder{
+
+    color:#93a3be;
+
+}
+
+.books-search button{
+
+    width:70px;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:1.2rem;
+
+    background:linear-gradient(135deg,#5e5ce6,#7c3aed);
+
+    transition:.35s;
+
+}
+
+.books-search button:hover{
+
+    filter:brightness(1.1);
+
+}
+
+
+/*=========================================================
+                    HERO RIGHT
+=========================================================*/
+
+.books-hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*=========================================================
+                ANIMATION PLACEHOLDER
+=========================================================*/
+
+.banner-placeholder{
+
+    width:100%;
+
+    max-width:550px;
+
+    height:360px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    border:1px dashed rgba(255,255,255,.12);
+
+    background:
+
+        linear-gradient(135deg,
+        rgba(255,255,255,.04),
+        rgba(255,255,255,.02));
+
+    backdrop-filter:blur(16px);
+
+    transition:.4s;
+
+}
+
+.banner-placeholder:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#5e5ce6;
+
+    box-shadow:
+
+    0 25px 60px rgba(94,92,230,.28);
+
+}
+
+.banner-placeholder i{
+
+    font-size:4rem;
+
+    color:#6f74ff;
+
+    margin-bottom:20px;
+
+    display:block;
+
+}
+
+.banner-placeholder h2{
+
+    color:#fff;
+
+    margin-bottom:12px;
+
+    font-size:1.8rem;
+
+}
+
+.banner-placeholder p{
+
+    color:#9eb1cf;
+
+    max-width:300px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================================
+                    RESPONSIVE
+=========================================================*/
+
+@media(max-width:1100px){
+
+.books-hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.books-hero-left{
+
+    max-width:100%;
+
+}
+
+.books-search{
+
+    margin:35px auto 0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.books-hero{
+
+    padding:40px 25px;
+
+}
+
+.books-hero h1{
+
+    font-size:2.5rem;
+
+}
+
+.banner-placeholder{
+
+    height:260px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.books-hero h1{
+
+    font-size:2rem;
+
+}
+
+.books-search{
+
+    flex-direction:column;
+
+    background:none;
+
+    border:none;
+
+    gap:12px;
+
+}
+
+.books-search input{
+
+    width:100%;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.books-search button{
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:14px;
+
+}
+
+}

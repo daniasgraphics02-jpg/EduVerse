@@ -1,0 +1,728 @@
+/*==================================================
+            EDUVERSE STATISTICS
+==================================================*/
+
+.statistics{
+
+    margin-top:100px;
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+            BACKGROUND EFFECT
+==================================================*/
+
+.statistics::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    left:-220px;
+    top:-180px;
+
+    background:radial-gradient(
+
+        rgba(124,58,237,.12),
+
+        transparent 70%
+
+    );
+
+    pointer-events:none;
+
+}
+
+.statistics::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    right:-220px;
+    bottom:-200px;
+
+    background:radial-gradient(
+
+        rgba(56,189,248,.10),
+
+        transparent 70%
+
+    );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================
+            SECTION HEADER
+==================================================*/
+
+.statistics .section-header{
+
+    text-align:center;
+    margin-bottom:65px;
+
+    position:relative;
+    z-index:2;
+
+}
+
+.statistics .section-tag{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 26px;
+
+    border-radius:50px;
+
+    background:rgba(124,58,237,.12);
+
+    border:1px solid rgba(124,58,237,.25);
+
+    color:var(--secondary-color);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:24px;
+
+}
+
+.statistics h2{
+
+    font-size:48px;
+
+    color:var(--white);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.statistics .section-header p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--paragraph);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+            GRID
+==================================================*/
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==================================================
+            CARD
+==================================================*/
+
+.stat-card{
+
+    position:relative;
+
+    padding:38px 28px;
+
+    text-align:center;
+
+    border-radius:26px;
+
+    background:var(--glass-bg);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+
+    transition:all .45s cubic-bezier(.175,.885,.32,1.275);
+
+}
+
+
+/* Gradient Border */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    padding:1px;
+
+    border-radius:26px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary-color),
+
+        var(--secondary-color)
+
+    );
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) content-box,
+
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+/* Glow */
+
+.stat-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    top:-140px;
+    right:-140px;
+
+    background:radial-gradient(
+
+        rgba(124,58,237,.18),
+
+        transparent 70%
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+/*==================================================
+            ICON
+==================================================*/
+
+.stat-icon{
+
+    width:84px;
+    height:84px;
+
+    margin:0 auto 24px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+
+    color:var(--white);
+
+    font-size:34px;
+
+    box-shadow:
+        0 15px 35px rgba(124,58,237,.25);
+
+    transition:all .45s ease;
+
+}
+
+
+/*==================================================
+            COUNTER
+==================================================*/
+
+.stat-card h3{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    color:var(--white);
+
+    margin-bottom:10px;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+
+}
+
+
+/*==================================================
+            LABEL
+==================================================*/
+
+.stat-card span{
+
+    display:block;
+
+    color:var(--paragraph);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    line-height:1.7;
+
+    transition:.35s;
+
+}
+
+
+/*==================================================
+            CARD HOVER
+==================================================*/
+
+.stat-card:hover{
+
+    transform:
+        translateY(-14px)
+        scale(1.03);
+
+    border-color:var(--glass-border-hover);
+
+    box-shadow:
+        var(--shadow-lg),
+        var(--primary-glow);
+
+}
+
+
+.stat-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+.stat-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+.stat-card:hover .stat-icon{
+
+    transform:
+        rotate(-8deg)
+        scale(1.12);
+
+    box-shadow:
+
+        0 20px 45px rgba(124,58,237,.45),
+
+        0 0 35px rgba(56,189,248,.25);
+
+}
+
+
+.stat-card:hover h3{
+
+    color:var(--secondary-color);
+
+}
+
+
+.stat-card:hover span{
+
+    color:var(--white);
+
+}
+
+
+/*==================================================
+            SHINE EFFECT
+==================================================*/
+
+.stat-card{
+
+    isolation:isolate;
+
+}
+
+
+.stat-card .shine{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+
+.stat-card .shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-150%;
+
+    width:60%;
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.20),
+
+            transparent
+
+        );
+
+    transform:skewX(-25deg);
+
+}
+
+
+.stat-card:hover .shine::before{
+
+    animation:statsShine .9s linear;
+
+}
+
+
+@keyframes statsShine{
+
+    100%{
+
+        left:170%;
+
+    }
+
+}
+
+
+/*==================================================
+            FLOATING ICON
+==================================================*/
+
+.stat-icon i{
+
+    animation:statFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes statFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+/*==================================================
+            TRUST BADGES
+==================================================*/
+
+.trust-badges{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.badge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 24px;
+
+    background:var(--glass-bg);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:50px;
+
+    transition:all .4s ease;
+
+    cursor:pointer;
+
+}
+
+.badge i{
+
+    font-size:20px;
+
+    color:var(--secondary-color);
+
+    transition:.35s;
+
+}
+
+.badge span{
+
+    color:var(--text-color);
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.badge:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary-color);
+
+    background:var(--glass-bg-hover);
+
+    box-shadow:
+
+        var(--primary-glow),
+
+        var(--shadow);
+
+}
+
+.badge:hover i{
+
+    transform:rotate(-12deg) scale(1.15);
+
+    color:var(--white);
+
+}
+
+.badge:hover span{
+
+    color:var(--white);
+
+}
+
+
+/*==================================================
+            ENTRANCE ANIMATION
+==================================================*/
+
+.stat-card{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:statReveal .8s forwards;
+
+}
+
+.stat-card:nth-child(1){animation-delay:.1s;}
+.stat-card:nth-child(2){animation-delay:.2s;}
+.stat-card:nth-child(3){animation-delay:.3s;}
+.stat-card:nth-child(4){animation-delay:.4s;}
+.stat-card:nth-child(5){animation-delay:.5s;}
+.stat-card:nth-child(6){animation-delay:.6s;}
+.stat-card:nth-child(7){animation-delay:.7s;}
+.stat-card:nth-child(8){animation-delay:.8s;}
+
+@keyframes statReveal{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.statistics{
+
+    margin-top:70px;
+
+}
+
+.statistics h2{
+
+    font-size:34px;
+
+}
+
+.statistics .section-header p{
+
+    font-size:15px;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    padding:30px 20px;
+
+}
+
+.stat-card h3{
+
+    font-size:36px;
+
+}
+
+.stat-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:28px;
+
+}
+
+.trust-badges{
+
+    gap:15px;
+
+}
+
+.badge{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.statistics h2{
+
+    font-size:28px;
+
+}
+
+.statistics .section-tag{
+
+    font-size:13px;
+
+    padding:10px 18px;
+
+}
+
+.stat-card{
+
+    border-radius:20px;
+
+}
+
+.badge{
+
+    padding:14px 18px;
+
+}
+
+.badge span{
+
+    font-size:14px;
+
+}
+
+}

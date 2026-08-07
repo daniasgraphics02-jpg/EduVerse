@@ -1,0 +1,556 @@
+/*=========================================
+        EDUVERSE ANIMATIONS
+=========================================*/
+
+
+/*=========================================
+        FADE UP
+=========================================*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        FADE DOWN
+=========================================*/
+
+.fade-down{
+
+    animation:fadeDown .8s ease forwards;
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        FADE LEFT
+=========================================*/
+
+.fade-left{
+
+    animation:fadeLeft .8s ease forwards;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=========================================
+        FADE RIGHT
+=========================================*/
+
+.fade-right{
+
+    animation:fadeRight .8s ease forwards;
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=========================================
+        ZOOM IN
+=========================================*/
+
+.zoom-in{
+
+    animation:zoomIn .7s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+        POP
+=========================================*/
+
+.pop{
+
+    animation:pop .5s ease;
+
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.7);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+        FLOAT
+=========================================*/
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+/*=========================================
+        PULSE GLOW
+=========================================*/
+
+.pulse{
+
+    animation:pulseGlow 2.5s infinite;
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(124,58,237,.2);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 25px rgba(124,58,237,.45),
+
+        0 0 45px rgba(56,189,248,.18);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(124,58,237,.2);
+
+    }
+
+}
+
+
+/*=========================================
+        ROTATE
+=========================================*/
+
+.rotate{
+
+    animation:rotate360 15s linear infinite;
+
+}
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*=========================================
+        SHINE
+=========================================*/
+
+.shine{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.shine::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-150%;
+
+    width:60%;
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+}
+
+.shine:hover::after{
+
+    animation:shineMove .8s linear;
+
+}
+
+@keyframes shineMove{
+
+    100%{
+
+        left:180%;
+
+    }
+
+}
+
+
+/*=========================================
+        BOUNCE
+=========================================*/
+
+.bounce{
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+/*=========================================
+        BLINK
+=========================================*/
+
+.blink{
+
+    animation:blink 1.2s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:.3;
+
+    }
+
+}
+
+
+/*=========================================
+        WAVE
+=========================================*/
+
+.wave{
+
+    animation:wave 2.5s infinite;
+
+    transform-origin:70% 70%;
+
+}
+
+@keyframes wave{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    20%{
+
+        transform:rotate(15deg);
+
+    }
+
+    40%{
+
+        transform:rotate(-10deg);
+
+    }
+
+    60%{
+
+        transform:rotate(10deg);
+
+    }
+
+    80%{
+
+        transform:rotate(-5deg);
+
+    }
+
+    100%{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+/*=========================================
+        GRADIENT MOVE
+=========================================*/
+
+.gradient-animation{
+
+    background-size:300% 300%;
+
+    animation:gradientMove 8s ease infinite;
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+
+/*=========================================
+        TEXT GLOW
+=========================================*/
+
+.glow-text{
+
+    animation:textGlow 2s infinite alternate;
+
+}
+
+@keyframes textGlow{
+
+    from{
+
+        text-shadow:
+
+        0 0 5px rgba(124,58,237,.2);
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 10px rgba(124,58,237,.8),
+
+        0 0 20px rgba(56,189,248,.5);
+
+    }
+
+}
+
+
+/*=========================================
+        HOVER LIFT
+=========================================*/
+
+.hover-lift{
+
+    transition:.4s;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/*=========================================
+        HOVER SCALE
+=========================================*/
+
+.hover-scale{
+
+    transition:.35s;
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/*=========================================
+        HOVER ROTATE
+=========================================*/
+
+.hover-rotate{
+
+    transition:.4s;
+
+}
+
+.hover-rotate:hover{
+
+    transform:rotate(8deg);
+
+}

@@ -1,0 +1,255 @@
+/* =====================================
+            EduVerse Header
+===================================== */
+
+.header{
+
+    position: fixed;
+    top: 15px;
+    left: 310px;
+    right: 15px;
+
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 28px;
+
+    background: var(--sidebar-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    z-index: 1000;
+
+    transition:
+    left .35s ease,
+    width .35s ease,
+    background-color .35s ease;
+
+}
+
+/* Header when sidebar is collapsed */
+
+.header.expanded{
+
+    left:125px;
+
+}
+
+/* ==============================
+        Search Bar
+================================ */
+
+.header-search{
+
+    width:500px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:0 18px;
+
+    background:#161F35;
+
+    border:1px solid transparent;
+    border-radius:14px;
+
+     transition:
+    left .35s ease,
+    width .35s ease,
+    background-color .35s ease;
+
+}
+
+.header-search:hover{
+
+    border-color:#38BDF8;
+
+}
+
+.header-search:focus-within{
+    border-color:#38BDF8;
+    box-shadow:0 0 15px rgba(56,189,248,.25);
+}
+
+.header-search i{
+    color:#94A3B8;
+    font-size:18px;
+}
+
+.header-search input{
+    flex:1;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+}
+
+.header-search input::placeholder{
+
+    color:#7B879C;
+
+}
+
+/*  Right Side */
+
+.header-right{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+}
+
+/* Notification */
+
+.header-icon{
+
+    position:relative;
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#161F35;
+
+    border:1px solid var(--border-color);
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+     transition:
+    left .35s ease,
+    width .35s ease,
+    background-color .35s ease;
+}
+
+.header-icon:hover{
+
+    transform:translateY(-2px);
+    border-color:#38BDF8;
+    box-shadow:0 0 12px rgba(56,189,248,.25);
+}
+
+.header-icon i{
+    color:#C2EAFD;
+    font-size:20px;
+}
+
+/* Notification Dot */
+
+.notification-badge{
+
+    position:absolute;
+
+    top:10px;
+    right:11px;
+
+    width:8px;
+    height:8px;
+
+    background:#FF3B5C;
+
+    border-radius:50%;
+
+}
+
+/* Profile*/
+
+.profile{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:8px 14px;
+
+    background:#161F35;
+
+    border:1px solid var(--border-color);
+    border-radius:14px;
+
+    cursor:pointer;
+
+     transition:
+    left .35s ease,
+    width .35s ease,
+    background-color .35s ease;
+
+
+}
+
+.profile:hover{
+
+    border-color:#38BDF8;
+
+    box-shadow:0 0 15px rgba(56,189,248,.25);
+
+}
+
+.profile img{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #3B82F6;
+
+}
+
+.profile-info{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.profile-info h4{
+
+    font-size:15px;
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}
+
+.profile-info p{
+    font-size:12px;
+    color:#94A3B8;
+
+}
+
+.profile .bi-chevron-down{
+    color:#94A3B8;
+
+    transition:
+    left .35s ease,
+    width .35s ease,
+    background-color .35s ease;
+
+
+}
+
+.profile:hover .bi-chevron-down{
+    transform:rotate(180deg);
+}

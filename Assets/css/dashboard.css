@@ -1,0 +1,470 @@
+/*====================================
+        DASHBOARD SECTION
+====================================*/
+
+.dashboard{
+
+    margin-top:70px;
+
+}
+
+/*====================================
+        GRID
+====================================*/
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/*====================================
+        CARD
+====================================*/
+
+.dashboard-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:24px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.45s cubic-bezier(.175,.885,.32,1.275);
+
+}
+
+/* Glow */
+
+.dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:radial-gradient(
+
+        rgba(124,58,237,.18),
+
+        transparent 70%
+
+    );
+
+    top:-130px;
+
+    right:-120px;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#7C3AED;
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.35),
+
+    0 0 40px rgba(124,58,237,.15);
+
+}
+
+.dashboard-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*====================================
+        HEADER
+====================================*/
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:22px;
+
+}
+
+.dashboard-header h2{
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-bottom:6px;
+
+}
+
+.dashboard-header p{
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+}
+
+.view-all{
+
+    color:#8B5CF6;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.view-all i{
+
+    margin-left:4px;
+
+    transition:.35s;
+
+}
+
+.view-all:hover{
+
+    color:#38BDF8;
+
+}
+
+.view-all:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/*====================================
+        LIST
+====================================*/
+
+.dashboard-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+/*====================================
+        ITEM
+====================================*/
+
+.dashboard-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.02);
+
+    border:1px solid transparent;
+
+    transition:.4s cubic-bezier(.175,.885,.32,1.275);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Animated Left Border */
+
+.dashboard-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:0;
+
+    background:linear-gradient(
+
+        180deg,
+
+        #7C3AED,
+
+        #38BDF8
+
+    );
+
+    transition:.4s;
+
+}
+
+.dashboard-item:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(124,58,237,.30);
+
+    background:rgba(124,58,237,.08);
+
+}
+
+.dashboard-item:hover::before{
+
+    height:100%;
+
+}
+
+/*====================================
+        LEFT
+====================================*/
+
+.item-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/*====================================
+        LOGO
+====================================*/
+
+.item-left img{
+
+    width:52px;
+
+    height:52px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:8px;
+
+    border-radius:12px;
+
+    box-shadow:
+
+    0 0 15px rgba(255,255,255,.35);
+
+    transition:.4s;
+
+}
+
+.dashboard-item:hover img{
+
+    transform:scale(1.12) rotate(-3deg);
+
+}
+
+/*====================================
+        COURSE ICON
+====================================*/
+
+.course-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    color:#fff;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7C3AED,
+
+        #3B82F6
+
+    );
+
+    transition:.4s;
+
+}
+
+.dashboard-item:hover .course-icon{
+
+    transform:rotate(12deg) scale(1.15);
+
+}
+
+/*====================================
+        TEXT
+====================================*/
+
+.item-left h4{
+
+    color:#fff;
+
+    font-size:16px;
+
+    margin-bottom:4px;
+
+}
+
+.item-left span{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+.item-right{
+
+    color:#FBBF24;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+/*====================================
+        SHINE EFFECT
+====================================*/
+
+.dashboard-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+.dashboard-item:hover::after{
+
+    animation:shine .8s linear;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:160%;
+
+    }
+
+}
+
+/*====================================
+        RESPONSIVE
+====================================*/
+
+@media(max-width:1200px){
+
+.dashboard-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard-header{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.dashboard-card{
+
+    padding:20px;
+
+}
+
+.item-left img,
+
+.course-icon{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+}
+
