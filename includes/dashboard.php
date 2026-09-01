@@ -18,11 +18,6 @@
                     <h2>Top Institutes</h2>
                     <p>Pakistan's Leading Institutes</p>
                 </div>
-
-                <a href="#" class="view-all">
-                    View All <i class="bi bi-arrow-right"></i>
-                </a>
-
             </div>
 
             <div class="dashboard-list">
@@ -111,11 +106,7 @@
 
                 </div>
 
-                <a href="#" class="view-all">
-
-                    View All <i class="bi bi-arrow-right"></i>
-
-                </a>
+        
 
             </div>
 
@@ -197,14 +188,9 @@
 
                 </div>
 
-                <a href="#" class="view-all">
-
-                    View All <i class="bi bi-arrow-right"></i>
-
-                </a>
-
             </div>
 
+    
             <div class="dashboard-list">
 
                 <div class="dashboard-item">

@@ -1,0 +1,167 @@
+.institutes-hero {
+    text-align: center;
+    max-width: 650px;
+    margin: 20px auto 45px auto;
+}
+
+.institutes-hero .section-badge {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--secondary-light);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 6px 16px;
+    border-radius: var(--radius-round);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.institutes-hero h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.institutes-hero p {
+    color: var(--paragraph);
+}
+
+.institutes-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.institute-card {
+    background: var(--card-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.institute-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.institute-card-logo {
+    width: 76px;
+    height: 76px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin-bottom: 6px;
+}
+
+.institute-card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.institute-card h3 {
+    font-size: 16px;
+    color: var(--heading-color);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.institute-course-count {
+    font-size: 12px;
+    color: var(--secondary-light);
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 4px 12px;
+    border-radius: var(--radius-round);
+}
+
+.institute-card-btn {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    padding: 9px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.institute-card-btn:hover {
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+    transform: scale(1.03);
+}
+
+/*==========================================================
+    INSTITUTE DETAIL PAGE (aptech.php, arena.php, etc.)
+==========================================================*/
+
+.institute-detail-hero {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--card-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.institute-detail-logo {
+    width: 84px;
+    height: 84px;
+    min-width: 84px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+
+.institute-detail-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.institute-detail-hero h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--paragraph);
+}
+
+.no-results i {
+    font-size: 34px;
+    color: var(--paragraph);
+    margin-bottom: 14px;
+    display: block;
+}
+
+.no-results h3 {
+    color: var(--heading-color);
+    font-size: 18px;
+    margin-bottom: 8px;
+}

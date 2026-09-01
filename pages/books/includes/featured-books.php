@@ -1,3 +1,31 @@
+<?php
+
+// Which of these 5 books (if any) are already in the logged-in
+// user's wishlist, so the heart shows filled/outline correctly.
+$wishlistedIds = [];
+if (isset($_SESSION['user_id'])) {
+    $uid = (int) $_SESSION['user_id'];
+    $wl = $conn->prepare("SELECT book_id FROM book_wishlist WHERE user_id = ?");
+    $wl->bind_param("i", $uid);
+    $wl->execute();
+    $wlResult = $wl->get_result();
+    while ($row = $wlResult->fetch_assoc()) {
+        $wishlistedIds[] = (int) $row['book_id'];
+    }
+    $wl->close();
+}
+
+function wishlistHeart($bookId, $wishlistedIds) {
+    $isWishlisted = in_array((int) $bookId, $wishlistedIds, true);
+    $icon = $isWishlisted ? 'bi-heart-fill' : 'bi-heart';
+    $action = $isWishlisted ? 'remove' : 'add';
+    echo '<a href="' . BASE_URL . 'pages/books/wishlist.php?action=' . $action . '&id=' . $bookId . '" class="book-wishlist">';
+    echo '<i class="bi ' . $icon . '"></i>';
+    echo '</a>';
+}
+
+?>
+
 <section class="featured-books">
 
     <div class="section-heading">
@@ -33,9 +61,7 @@
                     Bestseller
                 </span>
 
-                <div class="book-wishlist">
-                    <i class="bi bi-heart"></i>
-                </div>
+                <?php wishlistHeart(1, $wishlistedIds); ?>
 
             </div>
 
@@ -75,11 +101,11 @@
 
                 <div class="book-actions">
 
-                    <a href="#" class="details-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=1" class="details-btn">
                         Details
                     </a>
 
-                    <a href="#" class="cart-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=1" class="cart-btn">
                         Read
                     </a>
 
@@ -102,9 +128,7 @@
                     New
                 </span>
 
-                <div class="book-wishlist">
-                    <i class="bi bi-heart"></i>
-                </div>
+                <?php wishlistHeart(71, $wishlistedIds); ?>
 
             </div>
 
@@ -144,11 +168,11 @@
 
                 <div class="book-actions">
 
-                    <a href="#" class="details-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=71" class="details-btn">
                         Details
                     </a>
 
-                    <a href="#" class="cart-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=71" class="cart-btn">
                         Read
                     </a>
 
@@ -171,9 +195,7 @@
                     Popular
                 </span>
 
-                <div class="book-wishlist">
-                    <i class="bi bi-heart"></i>
-                </div>
+                <?php wishlistHeart(174, $wishlistedIds); ?>
 
             </div>
 
@@ -213,11 +235,11 @@
 
                 <div class="book-actions">
 
-                    <a href="#" class="details-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=174" class="details-btn">
                         Details
                     </a>
 
-                    <a href="#" class="cart-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=174" class="cart-btn">
                         Read
                     </a>
 
@@ -240,9 +262,7 @@
                     Trending
                 </span>
 
-                <div class="book-wishlist">
-                    <i class="bi bi-heart"></i>
-                </div>
+                <?php wishlistHeart(258, $wishlistedIds); ?>
 
             </div>
 
@@ -282,11 +302,11 @@
 
                 <div class="book-actions">
 
-                    <a href="#" class="details-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=258" class="details-btn">
                         Details
                     </a>
 
-                    <a href="#" class="cart-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=258" class="cart-btn">
                         Read
                     </a>
 
@@ -302,15 +322,13 @@
 
             <div class="book-image">
 
-                <img src="book1.png" alt="Book Cover">
+                <img src="https://picsum.photos/400/600?random=5" alt="Book Cover">
 
                 <span class="book-badge">
                     Trending
                 </span>
 
-                <div class="book-wishlist">
-                    <i class="bi bi-heart"></i>
-                </div>
+                <?php wishlistHeart(290, $wishlistedIds); ?>
 
             </div>
 
@@ -350,11 +368,11 @@
 
                 <div class="book-actions">
 
-                    <a href="#" class="details-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=290" class="details-btn">
                         Details
                     </a>
 
-                    <a href="#" class="cart-btn">
+                    <a href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=290" class="cart-btn">
                         Read
                     </a>
 

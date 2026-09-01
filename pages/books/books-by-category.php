@@ -25,29 +25,6 @@ if ($categoryId <= 0) {
 /*=========================================================
                 BOOK IMAGE FUNCTION
 =========================================================*/
-/*
-    IMPORTANT:
-
-    Physical folder:
-
-    pages/
-        books/
-            uploads/
-                bookcovers/
-                    technology/
-                        html-css.jpg
-
-    This file is located at:
-
-    pages/books/books-by-category.php
-
-    Therefore __DIR__ points to:
-
-    pages/books/
-
-    We use __DIR__ for the physical file check
-    and a URL path separately for the browser.
-*/
 
 function getBookImage($book)
 {
@@ -77,16 +54,7 @@ function getBookImage($book)
     $image  = trim($image, "/\\");
 
 
-    /*
-        PHYSICAL FILE PATH
-
-        Example:
-
-        C:/xampp/htdocs/
-        Aptech-Vision-EduFind-Project/
-        pages/books/uploads/bookcovers/
-        technology/html-css.jpg
-    */
+  
 
     $physicalPath =
         __DIR__
@@ -372,8 +340,7 @@ $booksQuery =
 
 
 <body>
-
-
+    
 <?php include("../../includes/sidebar.php"); ?>
 
 

@@ -24,11 +24,11 @@
 
         <div class="cta-buttons">
 
-            <a href="#" class="btn-primary">
+            <a href="<?php echo BASE_URL; ?>pages/courses/courses.php" class="btn-primary">
                 Explore Courses
             </a>
 
-            <a href="#" class="btn-secondary">
+             <a href="<?php echo BASE_URL; ?>pages/career-advisor/career-advisor.php"class="btn-secondary">
                 Try AI Advisor
             </a>
 

@@ -1,0 +1,2 @@
+# EduVerse AI Assistant — keep the real Groq API key out of version control.
+includes/ai-key.local.php

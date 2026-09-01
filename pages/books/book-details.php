@@ -1398,7 +1398,7 @@ and move toward real-world projects.
 
 
 <a
-    href="../../courses/courses.php"
+    href="../courses/courses.php"
     class="course-btn"
 >
 

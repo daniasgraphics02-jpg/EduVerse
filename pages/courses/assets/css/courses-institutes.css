@@ -1,0 +1,256 @@
+/*==========================
+ Courses - Partner Institutes
+==========================*/
+
+.courses-institutes{
+
+    padding:80px 8% 120px;
+    background:#090F1F;
+    position:relative;
+    overflow:hidden;
+
+}
+
+.courses-institutes::before{
+
+    content:'';
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    background:#4F7CFF;
+
+    filter:blur(220px);
+
+    opacity:.08;
+
+    top:-150px;
+    left:-100px;
+
+}
+
+.courses-institutes::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    background:#8B5CF6;
+
+    filter:blur(220px);
+
+    opacity:.08;
+
+    bottom:-120px;
+    right:-100px;
+
+}
+
+.courses-institutes .container{
+
+    max-width:1300px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+
+}
+
+/*==========================
+ Header
+==========================*/
+
+.courses-institutes .section-header{
+
+    text-align:center;
+    margin-bottom:80px;
+
+}
+
+.courses-institutes .section-badge{
+
+    display:inline-block;
+
+    padding:9px 18px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(79,124,255,.3);
+
+    background:rgba(79,124,255,.08);
+
+    color:#63A5FF;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+
+}
+
+.courses-institutes .section-header h2{
+
+    margin-top:25px;
+
+    color:#fff;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+}
+
+.courses-institutes .section-header h2 span{
+
+    background:linear-gradient(90deg,#38BDF8,#8B5CF6);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.courses-institutes .section-header p{
+
+    max-width:720px;
+
+    margin:20px auto 0;
+
+    color:#AEB7CC;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/*==========================
+ Logo Grid (display only - not clickable)
+==========================*/
+
+/*==========================*
+* Logo Grid
+*==========================*/
+
+.institutes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 60px 40px;
+
+    align-items: center;
+
+    justify-items: center;
+}
+
+.institute {
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    transition: all .35s ease;
+}
+
+.institute:hover {
+    transform: translateY(-8px);
+}
+
+.institute img {
+    width: 190px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    filter: grayscale(100%) brightness(1.7);
+
+    opacity: .75;
+
+    transition: all .35s ease;
+}
+
+.institute:hover img {
+    filter: grayscale(0%) brightness(1);
+
+    opacity: 1;
+
+    transform: scale(1.08);
+}
+
+.institute span {
+    color: #C6CFDE;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    transition: color .35s ease;
+}
+
+.institute:hover span {
+    color: #63A5FF;
+}
+/*==========================
+ Responsive
+==========================*/
+
+@media(max-width:1100px){
+
+.institutes-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.courses-institutes{
+
+    padding:60px 6% 90px;
+
+}
+
+.courses-institutes .section-header h2{
+
+    font-size:34px;
+
+}
+
+.institutes-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:45px 30px;
+
+}
+
+.institute img{
+
+    width:140px;
+    height:80px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.institutes-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}

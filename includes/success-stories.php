@@ -13,23 +13,18 @@
         </span>
 
         <h2>
-
             Real Learners.
             <span class="gradient-text">
                 Real Results.
             </span>
-
         </h2>
 
         <p>
-
             Students who followed EduVerse AI recommendations
             transformed their careers through the right learning path.
-
         </p>
 
     </div>
-
 
 
     <!-- Stories Grid -->
@@ -37,21 +32,17 @@
     <div class="stories-grid">
 
 
-        <!-- Story 1 -->
+        <!-- ================= STORY 1 ================= -->
 
         <div class="story-card">
 
             <div class="story-top">
 
-                <img src="Assets/images/student1.png"
-                     alt="Sarah">
+                <img src="Assets/images/student1.png" alt="Sarah">
 
                 <div>
-
                     <h3>Sarah Ahmed</h3>
-
                     <span>Software Engineering</span>
-
                 </div>
 
             </div>
@@ -79,19 +70,13 @@
             <div class="story-info">
 
                 <div>
-
                     <i class="bi bi-clock"></i>
-
                     <span>6 Months</span>
-
                 </div>
 
                 <div>
-
                     <i class="bi bi-stars"></i>
-
                     <span>★★★★★</span>
-
                 </div>
 
             </div>
@@ -100,7 +85,6 @@
             <div class="badges">
 
                 <span>🏆 Hired</span>
-
                 <span>💼 Software Engineer</span>
 
             </div>
@@ -115,7 +99,8 @@
             </p>
 
 
-            <a href="#" class="story-btn">
+            <a href="<?php echo BASE_URL; ?>pages/resources/success-stories.php"
+               class="story-btn">
 
                 View Story
 
@@ -127,21 +112,17 @@
 
 
 
-        <!-- Story 2 -->
+        <!-- ================= STORY 2 ================= -->
 
         <div class="story-card">
 
             <div class="story-top">
 
-                <img src="Assets/images/student2.png"
-                     alt="Ali">
+                <img src="Assets/images/student2.png" alt="Ali">
 
                 <div>
-
                     <h3>Ali Khan</h3>
-
                     <span>Digital Marketing</span>
-
                 </div>
 
             </div>
@@ -158,9 +139,7 @@
                     <i class="bi bi-arrow-down"></i>
 
                     <span class="salary-after">
-
                         $1,500
-
                     </span>
 
                 </div>
@@ -171,19 +150,13 @@
             <div class="story-info">
 
                 <div>
-
                     <i class="bi bi-clock"></i>
-
                     <span>4 Months</span>
-
                 </div>
 
                 <div>
-
                     <i class="bi bi-stars"></i>
-
                     <span>★★★★★</span>
-
                 </div>
 
             </div>
@@ -192,7 +165,6 @@
             <div class="badges">
 
                 <span>🌍 Freelancer</span>
-
                 <span>📈 Digital Marketer</span>
 
             </div>
@@ -207,7 +179,8 @@
             </p>
 
 
-            <a href="#" class="story-btn">
+            <a href="<?php echo BASE_URL; ?>pages/resources/success-stories.php"
+               class="story-btn">
 
                 View Story
 
@@ -219,21 +192,17 @@
 
 
 
-        <!-- Story 3 -->
+        <!-- ================= STORY 3 ================= -->
 
         <div class="story-card">
 
             <div class="story-top">
 
-                <img src="Assets/images/student3.png"
-                     alt="Fatima">
+                <img src="Assets/images/student3.png" alt="Fatima">
 
                 <div>
-
                     <h3>Fatima Noor</h3>
-
                     <span>Graphic Designer</span>
-
                 </div>
 
             </div>
@@ -250,9 +219,7 @@
                     <i class="bi bi-arrow-down"></i>
 
                     <span class="salary-after">
-
                         PKR 180,000
-
                     </span>
 
                 </div>
@@ -263,19 +230,13 @@
             <div class="story-info">
 
                 <div>
-
                     <i class="bi bi-clock"></i>
-
                     <span>5 Months</span>
-
                 </div>
 
                 <div>
-
                     <i class="bi bi-stars"></i>
-
                     <span>★★★★★</span>
-
                 </div>
 
             </div>
@@ -284,7 +245,6 @@
             <div class="badges">
 
                 <span>🎨 Designer</span>
-
                 <span>🚀 Fiverr Level 2</span>
 
             </div>
@@ -299,7 +259,8 @@
             </p>
 
 
-            <a href="#" class="story-btn">
+            <a href="<?php echo BASE_URL; ?>pages/resources/success-stories.php"
+               class="story-btn">
 
                 View Story
 
@@ -319,40 +280,29 @@
     <div class="stories-stats">
 
         <div>
-
             <h3>2500+</h3>
-
             <p>Students Guided</p>
-
         </div>
 
         <div>
-
             <h3>600+</h3>
-
             <p>Career Roadmaps</p>
-
         </div>
 
         <div>
-
             <h3>120+</h3>
-
             <p>Partner Institutes</p>
-
         </div>
 
         <div>
-
             <h3>95%</h3>
-
             <p>Success Rate</p>
-
         </div>
 
     </div>
 
 </section>
+
 <br>
 <br>
 <br>

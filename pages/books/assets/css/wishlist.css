@@ -1,0 +1,43 @@
+.wishlist-header {
+    margin-bottom: 30px;
+}
+
+.wishlist-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 6px;
+}
+
+.wishlist-header p {
+    color: var(--paragraph);
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 70px 20px;
+    color: var(--paragraph);
+}
+
+.no-results i {
+    font-size: 40px;
+    color: var(--paragraph);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.no-results h3 {
+    color: var(--heading-color);
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.no-results .visit-btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.book-wishlist {
+    text-decoration: none;
+}

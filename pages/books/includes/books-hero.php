@@ -1,56 +1,136 @@
-<section class="books-hero">
+<!-- =========================================================
+     BOOKS HERO SECTION
+========================================================= -->
 
-    <div class="books-hero-left">
+<section class="books-hero-container">
 
-        <span class="section-badge">
-            📚 Books Library
-        </span>
+    <!-- =====================================================
+         PREMIUM TOP BOOKS HERO CARD
+    ====================================================== -->
 
-        <h1>
-            Discover Your Next
-            <span class="gradient-text">Favorite Book</span>
-        </h1>
+    <div class="books-hero-split-grid prominent-card">
 
-        <p>
-            Explore thousands of books in Programming, Artificial Intelligence,
-            Design, Business, Marketing, Cyber Security, and many more categories
-            to accelerate your learning journey.
-        </p>-
+        <!-- LEFT SIDE -->
+        <div class="books-grid-left-col">
 
-        <div class="books-search">
+            <!-- BOOK ICON -->
+            <div class="books-icon-badge dynamic-glow">
 
-            <input
-                type="text"
-                placeholder="Search books, authors or categories...">
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                </svg>
 
-            <button>
+            </div>
 
-                <i class="bi bi-search"></i>
 
-            </button>
+            <!-- TEXT -->
+            <div class="books-header-text-block">
+
+                <span class="books-video-subtitle-premium">
+                    Explore the Books Library
+                </span>
+
+                <h2 class="books-prominent-title">
+
+                    Discover Your Next
+                    <span class="books-gradient-text-glow">
+                        Favorite Book
+                    </span>
+
+                </h2>
+
+                <p class="books-sub-intent-premium">
+
+                    Expand your knowledge with
+                    <span class="books-highlight-purple-glow">
+                        books that inspire.
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT SIDE
+        ================================================== -->
+
+        <div class="books-grid-right-col">
+
+            <p class="books-description-text-premium">
+
+                Explore thousands of books and discover
+                resources to accelerate your learning journey.
+
+            </p>
+
+
+            <!-- BOOK ICON -->
+
+            <div class="books-icon-badge dynamic-glow">
+
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <div class="books-hero-right">
+    <!-- =====================================================
+         CINEMATIC BOOKS VIDEO BANNER
+    ====================================================== -->
 
-        <div class="banner-placeholder">
+    <div class="books-hero-video-frame ambient-cinematic-banner">
 
-            <div>
+        <div class="books-banner-video">
 
-                <i class="bi bi-collection-play"></i>
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                id="books-ambient-video"
+            >
 
-                <h2>Animated Banner</h2>
+                <source
+                    src="<?php echo BASE_URL; ?>Assets/videos/books-banner.mp4"
+                    type="video/mp4"
+                >
 
-                <p>
-                    Google Flow AI animation will appear here.
-                </p>
-
-            </div>
+            </video>
 
         </div>
+
+
+        <!-- SOFT VIGNETTE -->
+
+        <div class="books-hero-media-overlay-vignette"></div>
 
     </div>
 

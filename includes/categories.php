@@ -30,7 +30,7 @@
 
         <!-- Books -->
 
-        <a href="#" class="category-card">
+        <a href="pages/books/books.php" class="category-card">
 
             <div class="category-icon purple">
                 <i class="bi bi-book-fill"></i>
@@ -57,7 +57,7 @@
 
         <!-- Courses -->
 
-        <a href="#" class="category-card">
+        <a href="pages/courses/courses.php" class="category-card">
 
             <div class="category-icon cyan">
                 <i class="bi bi-mortarboard-fill"></i>
@@ -84,7 +84,7 @@
 
         <!-- Institutes -->
 
-        <a href="#" class="category-card">
+        <a href="pages/courses/courses.php" class="category-card">
 
             <div class="category-icon blue">
                 <i class="bi bi-building"></i>

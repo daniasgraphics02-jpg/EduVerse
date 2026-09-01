@@ -1,0 +1,11 @@
+<?php
+header('Content-Type: application/json; charset=utf-8');
+require_once __DIR__ . '/../includes/ai-config.php';
+function failCareer($code,$msg){http_response_code($code);echo json_encode(['error'=>$msg]);exit;}
+if($_SERVER['REQUEST_METHOD']!=='POST') failCareer(405,'Method not allowed.');
+$payload=json_decode(file_get_contents('php://input'),true);$answers=is_array($payload['answers']??null)?$payload['answers']:null;if(!$answers) failCareer(400,'Assessment answers are missing.');
+$system='You are EduVerse AI Career Advisor. Analyze ONLY the student profile supplied. Return valid JSON only, with no markdown, using this exact shape: {"primaryCareer":{"name":"string","fitScore":0,"why":["string"]},"alternativeCareers":[{"name":"string","fitScore":0}],"strengths":["string"],"skillGaps":["string"],"roadmap":[{"phase":"string","focus":"string"}]}. Give 3 alternative careers, 3-5 strengths, 3-6 skill gaps and 4 roadmap phases. Scores are recommendation scores, not scientific probabilities. Be specific, practical and do not invent qualifications or experience.';
+if(!defined('GROQ_API_KEY')||GROQ_API_KEY===''){failCareer(503,'AI service is not configured.');}
+if(!function_exists('curl_init')) failCareer(500,'PHP cURL is not enabled.');
+$body=json_encode(['model'=>GROQ_MODEL,'messages'=>[['role'=>'system','content'=>$system],['role'=>'user','content'=>'Student assessment: '.json_encode($answers)]],'temperature'=>0.35,'max_tokens'=>900,'response_format'=>['type'=>'json_object']]);
+$ch=curl_init(GROQ_API_ENDPOINT);curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_POST=>true,CURLOPT_POSTFIELDS=>$body,CURLOPT_HTTPHEADER=>['Content-Type: application/json','Authorization: Bearer '.GROQ_API_KEY],CURLOPT_TIMEOUT=>25,CURLOPT_CONNECTTIMEOUT=>10]);$raw=curl_exec($ch);$err=curl_error($ch);$status=curl_getinfo($ch,CURLINFO_HTTP_CODE);curl_close($ch);if($raw===false) failCareer(502,'AI service could not be reached.');$decoded=json_decode($raw,true);$content=trim((string)($decoded['choices'][0]['message']['content']??''));if($status!==200||$content==='') failCareer(502,'AI analysis is temporarily unavailable.');$analysis=json_decode($content,true);if(!is_array($analysis)||empty($analysis['primaryCareer'])) failCareer(502,'AI returned an invalid analysis.');echo json_encode(['analysis'=>$analysis,'source'=>'ai']);

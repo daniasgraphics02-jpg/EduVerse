@@ -1,123 +1,237 @@
-<aside class= "sidebar">
-        
-    <!-- TOP -->
-         <div class="sidebar-top">
-        <button id="menuBtn" class="menu-btn">
-              <i class="bi bi-list"></i>
-            </button>
+<?php
 
-            <div class="logo">
-                <img src="<?php echo BASE_URL; ?>Assets/images/Logo.png" alt="EduVerse Logo">
-                
+if (!isset($activePage)) {
+    $activePage = '';
+}
 
-                <div class="logo-heading">
-                    <h1>EduVerse</h1>
-                    <p>learn. Grow. Succeed.</p>
+?>
 
-                </div> 
-            </div> <!-- logo -->
-         </div> <!-- sidebar-top -->
+<aside class="sidebar">
 
 
-         <!-- sidebar menu -->
-          <p class="menu-title">MAIN MENU</p>
+    <!-- =====================================================
+         SIDEBAR TOP
+    ====================================================== -->
 
-         <ul class="menu">
-            <li class="active">
-                <a href="<?php echo BASE_URL; ?>Index.php">
-                   <i class="bi bi-house-door-fill"></i>
-                   <span>  Home</span>
-                </a>
-            </li>
+    <div class="sidebar-top">
 
-             <li>
-                <a href="#">
-                   <i class="bi bi-mortarboard-fill"></i>
-                   <span>  Courses</span>
-                </a>
-            </li>
+        <!-- HAMBURGER -->
 
-             <li>
-                <a  href="<?php echo BASE_URL; ?>pages/books/books.php">
-                   <i class="bi bi-book-fill"></i>
-                   <span>  Books</span>
-                </a>
-            </li>
+        <button
+            id="menuBtn"
+            class="menu-btn"
+            type="button"
+            aria-label="Toggle sidebar"
+        >
 
-             <li>
-                <a href="#">
-                   <i class="bi bi-building"></i>
-                   <span>Institutes</span>
-                </a>
-            </li>
+            <i class="bi bi-list"></i>
 
-             <li>
-                <a href="#">
-                   <i class="bi bi-robot"></i>
-                   <span>AI Advisor</span>
-                </a>
-            </li>
-
-             <li>
-                <a href="#">
-                    <i class="bi bi-map-fill"></i>
-                   <span>Roadmap</span>
-                </a>
-            </li>
+        </button>
 
 
-             <li>
-                <a href="#">
-                   <i class="bi bi-heart-fill"></i>
-                   <span>Wishlist</span>
-                </a>
-            </li>
+        <!-- LOGO -->
 
-         </ul>
+        <div class="logo">
 
+            <img
+                src="<?php echo BASE_URL; ?>Assets/images/Logo.png"
+                alt="EduVerse Logo"
+            >
 
-<!-- Divider -->
-<div class="divider"></div>
+            <div class="logo-heading">
 
-<!-- Bottom Menu -->
+                <h1>EduVerse</h1>
 
-<p class="menu-title">ACCOUNT</p>
+                <p>Learn. Grow. Succeed.</p>
 
-<ul class="menu">
+            </div>
 
-    <li>
-        <a href="#">
-            <i class="bi bi-person-circle"></i>
-            <span>Profile</span>
-        </a>
-    </li>
-
-    <li>
-        <a href="#">
-            <i class="bi bi-gear-fill"></i>
-            <span>Settings</span>
-        </a>
-    </li>
-
-    <li>
-        <a href="#">
-            <i class="bi bi-question-circle-fill"></i>
-            <span>Help</span>
-        </a>
-    </li>
-</ul>
-
-<div class="dark-mode">
-    <div class="dark-left">
-        <i class="bi bi-moon-stars-fill"></i>
-        <div>
-            <h4>Dark mode</h4>
-             <p>currently enabled</p>
         </div>
+
     </div>
-    <label class="switch">
-        <input type="checkbox" checked>
-        <span class="slider"></span>
-    </label>
-</div>
-    </aside>
+
+
+    <!-- =====================================================
+         MAIN MENU
+    ====================================================== -->
+
+    <p class="menu-title">MAIN MENU</p>
+
+
+    <ul class="menu">
+
+
+        <!-- HOME -->
+
+        <li class="<?php echo ($activePage === 'home') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>Index.php">
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>Home</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- COURSES -->
+
+        <li class="<?php echo ($activePage === 'courses') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/courses/courses.php">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+                <span>Courses</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- BOOKS -->
+
+        <li class="<?php echo ($activePage === 'books') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/books/books.php">
+
+                <i class="bi bi-book-fill"></i>
+
+                <span>Books</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- INSTITUTES -->
+
+        <li class="<?php echo ($activePage === 'institutes') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/institutes/institutes.php">
+
+                <i class="bi bi-building"></i>
+
+                <span>Institutes</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- AI ADVISOR -->
+
+        <li class="<?php echo ($activePage === 'ai-advisor') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/career-advisor/career-advisor.php">
+
+                <i class="bi bi-robot"></i>
+
+                <span>AI Career Advisor</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- ROADMAP -->
+
+        <li class="<?php echo ($activePage === 'roadmap') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/career-advisor/roadmap.php">
+
+                <i class="bi bi-signpost-split-fill"></i>
+
+                <span>Roadmaps</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- WISHLIST -->
+
+        <li class="<?php echo ($activePage === 'wishlist') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>pages/books/wishlist.php">
+
+                <i class="bi bi-heart-fill"></i>
+
+                <span>Wishlist</span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+
+    <!-- =====================================================
+         DIVIDER
+    ====================================================== -->
+
+    <div class="divider"></div>
+
+
+    <!-- =====================================================
+         ACCOUNT
+    ====================================================== -->
+
+    <p class="menu-title">OTHER</p>
+
+
+    <ul class="menu">
+
+
+        <!-- PROFILE -->
+
+        <li class="<?php echo ($activePage === 'profile') ? 'active' : ''; ?>">
+
+            <a href="<?php echo BASE_URL; ?>dash.php">
+
+                <i class="bi bi-person-circle"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+        </li>
+
+    <!-- =====================================================
+         DARK MODE
+    ====================================================== -->
+
+    <div class="dark-mode">
+
+        <div class="dark-left">
+
+            <i class="bi bi-moon-stars-fill"></i>
+
+            <div>
+
+                <h4>Dark Mode</h4>
+
+                <p>Currently enabled</p>
+
+            </div>
+
+        </div>
+
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                checked
+            >
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+</aside>

@@ -28,7 +28,6 @@
 <link rel="stylesheet" href="Assets/css/responsive.css">
 
 <link rel="stylesheet" href="Assets/css/success-stories.css">
-<link rel="stylesheet" href="Assets/css/partner-institutes.css">
 <link rel="stylesheet" href="Assets/css/faq.css">
 <link rel="stylesheet" href="Assets/css/final-cta.css">
 <link rel="stylesheet" href="Assets/css/footer.css">
@@ -52,6 +51,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 
 <!-- sidebar -->
+ <?php $activePage = 'home'; ?>
  <?php include 'includes/sidebar.php'; ?>
 
  <!-- header -->
@@ -77,8 +77,6 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
         <?php include 'includes/featured-resources.php'; ?>
 
         <?php include 'includes/success-stories.php'; ?>
-
-        <?php include 'includes/partner-institutes.php'; ?>
 
         <?php include 'includes/faq.php'; ?>
 

@@ -1,0 +1,471 @@
+/*==========================================================
+    SHARED
+    (color variables come from Assets/css/core/style.css —
+    no separate :root here, so this never fights the rest
+    of the site's theme)
+==========================================================*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.category-back-link {
+    margin-bottom: 20px;
+}
+
+.category-back-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--paragraph);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.category-back-link a:hover {
+    color: var(--secondary-color);
+}
+
+.banner {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(56, 189, 248, 0.05) 100%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+.banner h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.banner p {
+    font-size: 16px;
+    color: var(--paragraph);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/*==========================================================
+    CATEGORY GRID (25 category cards, on courses.php)
+==========================================================*/
+
+.courses-category-section {
+    padding: 60px 0;
+}
+
+.category-grid-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+}
+
+.category-grid-header .section-badge {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--secondary-light);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 6px 16px;
+    border-radius: var(--radius-round);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.category-grid-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.category-grid-header p {
+    color: var(--paragraph);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.category-card {
+    background: var(--card-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 26px 22px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+.category-card .category-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.category-card h3 {
+    font-size: 17px;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.category-card .category-count {
+    font-size: 12px;
+    color: var(--paragraph);
+}
+
+.category-card .category-arrow {
+    margin-top: auto;
+    color: var(--secondary-light);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/*==========================================================
+    COURSE LISTING (horizontal institute cards, category.php)
+==========================================================*/
+
+.course-card-horizontal {
+    background: var(--card-color);
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition), border var(--transition), box-shadow var(--transition);
+    text-decoration: none;
+}
+
+.course-card-horizontal:hover {
+    transform: translateY(-6px);
+    border-color: var(--glass-border-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                0 0 35px rgba(56, 189, 248, 0.65),
+                0 0 15px rgba(0, 229, 255, 0.45);
+}
+
+.course-img {
+    display: block;
+    width: 280px;
+    min-width: 280px;
+    object-fit: cover;
+    align-self: stretch;
+    height: auto;
+}
+
+.course-details {
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.institute-badge {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--secondary-light);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 5px 14px;
+    border-radius: var(--radius-round);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.course-details h3 {
+    font-size: 21px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.meta-info {
+    font-size: 13px;
+    color: var(--paragraph);
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.meta-info span strong {
+    color: var(--text-color);
+}
+
+.course-desc {
+    font-size: 14px;
+    color: var(--paragraph);
+    line-height: 1.6;
+}
+
+.visit-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    transition: var(--transition);
+}
+
+.visit-btn:hover {
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+    box-shadow: var(--secondary-glow);
+    transform: scale(1.02);
+}
+
+/*==========================================================
+    COURSE DETAIL PAGE
+==========================================================*/
+
+.detail-hero {
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--glass-border);
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    margin-bottom: 0;
+}
+
+.detail-hero-content {
+    max-width: 800px;
+}
+
+.detail-category-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: var(--radius-round);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.detail-hero-content h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.detail-hero-institute {
+    text-decoration: none;
+    margin-bottom: 22px;
+}
+
+.detail-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.hero-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-stat-emoji {
+    font-size: 20px;
+}
+
+.hero-stat-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-stat-value {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.detail-section {
+    background: var(--card-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 28px 30px;
+    margin-bottom: 24px;
+}
+
+.detail-section h2 {
+    font-size: 19px;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.detail-desc {
+    font-size: 15px;
+    color: var(--paragraph);
+    line-height: 1.75;
+}
+
+.institute-info-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.institute-info-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.institute-info-card h3 {
+    font-size: 16px;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.institute-info-card p {
+    font-size: 14px;
+    color: var(--paragraph);
+    line-height: 1.6;
+}
+
+.detail-aside {
+    position: sticky;
+    top: 20px;
+}
+
+.quick-facts-card {
+    background: var(--card-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 26px;
+}
+
+.quick-facts-card h3 {
+    font-size: 16px;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.fact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 13px;
+}
+
+.fact-row:last-of-type {
+    border-bottom: none;
+}
+
+.fact-label {
+    color: var(--paragraph);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fact-value {
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: right;
+}
+
+.fact-value-muted {
+    color: var(--paragraph);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.detail-enroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 14px;
+    padding: 13px 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 950px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .detail-aside {
+        position: static;
+    }
+}
+
+@media (max-width: 850px) {
+    .course-card-horizontal {
+        flex-direction: column;
+    }
+    .course-img {
+        width: 100%;
+        min-width: 100%;
+        height: 200px;
+    }
+}

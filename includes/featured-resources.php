@@ -31,26 +31,28 @@
 
     <div class="resources-grid">
 
+
         <!-- ================= BOOK ================= -->
 
         <div class="resource-card">
 
             <div class="resource-image">
 
-                <img src="Assets/images/atomic-habits.jpg"
-                     alt="Atomic Habits">
+                <img
+                    src="Assets/images/atomic-habits.jpg"
+                    alt="Atomic Habits">
 
             </div>
 
             <div class="resource-content">
 
                 <span class="resource-category">
-
                     📘 Best Selling Book
-
                 </span>
 
-                <h3>Atomic Habits</h3>
+                <h3>
+                    Atomic Habits
+                </h3>
 
                 <p>
                     Learn powerful habits that transform your
@@ -69,8 +71,9 @@
 
                 </div>
 
-                <a href="#"
-                   class="resource-btn">
+                <a
+                    href="<?php echo BASE_URL; ?>pages/books/book-details.php?id=317"
+                    class="resource-btn">
 
                     View Details
 
@@ -83,73 +86,71 @@
         </div>
 
 
-<!-- ================= COURSE ================= -->
 
-<div class="resource-card course-card">
+        <!-- ================= COURSE ================= -->
 
-    <!-- Course Image -->
+        <div class="resource-card course-card">
 
-    <div class="resource-image">
+            <div class="resource-image">
 
-        <img
-            id="courseImage"
-            src="Assets/images/software-engineering.jpg"
-            alt="Software Engineering Diploma">
+                <img
+                    id="courseImage"
+                    src="Assets/images/software-engineering.jpg"
+                    alt="Software Engineering Diploma">
 
-    </div>
+            </div>
 
-    <div class="resource-content">
+            <div class="resource-content">
 
-        <span
-            class="resource-category"
-            id="courseBadge">
+                <span
+                    class="resource-category"
+                    id="courseBadge">
 
-            💻 Professional Diploma
+                    💻 Professional Diploma
 
-        </span>
+                </span>
 
-        <h3 id="courseTitle">
+                <h3 id="courseTitle">
 
-            Software Engineering Diploma
+                    Software Engineering Diploma
 
-        </h3>
+                </h3>
 
-        <p id="courseDescription">
+                <p id="courseDescription">
 
-            Learn HTML, CSS, JavaScript, PHP,
-            MySQL, Python and modern Full Stack
-            Development from industry experts.
+                    Learn HTML, CSS, JavaScript, PHP,
+                    MySQL, Python and modern Full Stack
+                    Development from industry experts.
 
-        </p>
+                </p>
 
-        <div class="resource-meta">
+                <div class="resource-meta">
 
-            <span id="courseRating">
+                    <span id="courseRating">
+                        ⭐ 4.9
+                    </span>
 
-                ⭐ 4.9
+                    <span id="courseDuration">
+                        2 Years
+                    </span>
 
-            </span>
+                </div>
 
-            <span id="courseDuration">
+                <a
+                    href="<?php echo BASE_URL; ?>pages/courses/course-detail.php?slug=backend&id=6"
+                    class="resource-btn">
 
-                2 Years
+                    View Details
 
-            </span>
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
-        <a href="#"
-           class="resource-btn">
 
-            View Details
-
-            <i class="bi bi-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</div>
 
         <!-- ================= INSTITUTE ================= -->
 
@@ -157,8 +158,9 @@
 
             <div class="resource-image">
 
-                <img src="Assets/images/aptech.jpg"
-                     alt="Aptech">
+                <img
+                    src="Assets/images/aptech.jpg"
+                    alt="Aptech">
 
             </div>
 
@@ -170,7 +172,9 @@
 
                 </span>
 
-                <h3>Aptech Learning</h3>
+                <h3>
+                    Aptech Learning
+                </h3>
 
                 <p>
                     One of Pakistan's leading institutes for
@@ -189,8 +193,9 @@
 
                 </div>
 
-                <a href="#"
-                   class="resource-btn">
+                <a
+                    href="<?php echo BASE_URL; ?>pages/institutes/aptech.php"
+                    class="resource-btn">
 
                     View Details
 
@@ -201,6 +206,7 @@
             </div>
 
         </div>
+
 
     </div>
 

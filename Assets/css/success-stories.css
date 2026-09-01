@@ -465,3 +465,76 @@
     color:#94A3B8;
 
 }
+
+/*=========================================================
+                    RESPONSIVE
+=========================================================*/
+
+@media (max-width: 1100px) {
+
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stories-header h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .success-stories {
+        margin-top: 70px;
+    }
+
+    .stories-header {
+        margin-bottom: 45px;
+    }
+
+    .stories-header h2 {
+        font-size: 28px;
+    }
+
+    .stories-header p {
+        font-size: 15px;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .story-card {
+        padding: 24px;
+    }
+
+    .stories-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .stories-stats div {
+        padding: 22px;
+    }
+
+    .stories-stats h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .story-top img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .story-top h3 {
+        font-size: 20px;
+    }
+
+    .stories-stats {
+        grid-template-columns: 1fr;
+    }
+}

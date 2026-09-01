@@ -18,8 +18,11 @@
 
                 <div class="footer-logo">
 
-                    <img src="<?php echo BASE_URL; ?>Assets/images/Logo.png" alt="EduVerse">
-                    
+                    <img
+                        src="<?php echo BASE_URL; ?>Assets/images/Logo.png"
+                        alt="EduVerse"
+                    >
+
                     <div>
 
                         <h3>EduVerse</h3>
@@ -30,6 +33,7 @@
 
                 </div>
 
+
                 <p class="footer-description">
 
                     Empowering every learner to build a smarter future.
@@ -38,6 +42,7 @@
 
                 </p>
 
+
                 <!-- Newsletter -->
 
                 <div class="newsletter">
@@ -45,20 +50,26 @@
                     <h4>Subscribe to our Newsletter</h4>
 
                     <p>
+
                         Get updates about new courses, institutes,
                         learning resources and platform features.
+
                     </p>
 
-                    <form class="newsletter-form">
+
+                    <form class="newsletter-form" id="newsletterForm">
 
                         <input
                             type="email"
+                            name="email"
+                            id="newsletterEmail"
                             placeholder="Enter your email address"
+                            required
                         >
 
-                        <button type="submit">
+                        <button type="submit" id="newsletterBtn">
 
-                            Subscribe
+                            <span class="newsletter-btn-text">Subscribe</span>
 
                         </button>
 
@@ -80,15 +91,49 @@
 
                 <ul>
 
-                    <li><a href="#">Home</a></li>
+                    <!-- HOME -->
 
-                    <li><a href="#">Courses</a></li>
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>Index.php">
+                            Home
+                        </a>
+                    </li>
 
-                    <li><a href="#">Books</a></li>
 
-                    <li><a href="#">Institutes</a></li>
+                    <!-- COURSES -->
 
-                    <li><a href="#">AI Career Advisor</a></li>
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/courses/courses.php">
+                            Courses
+                        </a>
+                    </li>
+
+
+                    <!-- BOOKS -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/books/books.php">
+                            Books
+                        </a>
+                    </li>
+
+
+                    <!-- INSTITUTES -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/institutes/institutes.php">
+                            Institutes
+                        </a>
+                    </li>
+
+
+                    <!-- AI CAREER ADVISOR -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/career-advisor/career-advisor.php">
+                            AI Career Advisor
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -106,15 +151,50 @@
 
                 <ul>
 
-                    <li><a href="#">Learning Roadmaps</a></li>
+                    <!-- LEARNING ROADMAPS
+                         Leave for now -->
 
-                    <li><a href="#">Featured Resources</a></li>
+                    <li>
+                        <a href="#">
+                            Learning Roadmaps
+                        </a>
+                    </li>
 
-                    <li><a href="#">Success Stories</a></li>
 
-                    <li><a href="#">FAQs</a></li>
+                    <!-- FEATURED RESOURCES -->
 
-                    <li><a href="#">Blog</a></li>
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/resources/Featured-resouces.php">
+                            Featured Resources
+                        </a>
+                    </li>
+
+
+                    <!-- SUCCESS STORIES -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/resources/Success-stories.php">
+                            Success Stories
+                        </a>
+                    </li>
+
+
+                    <!-- FAQS -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/support/faqs.php">
+                            FAQs
+                        </a>
+                    </li>
+
+
+                    <!-- BLOG -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/blog/blog.php">
+                            Blog
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -132,13 +212,31 @@
 
                 <ul>
 
-                    <li><a href="#">Contact Us</a></li>
+                    <!-- CONTACT -->
 
-                    <li><a href="#">Help Center</a></li>
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/support/contact.php">
+                            Contact Us
+                        </a>
+                    </li>
 
-                    <li><a href="#">Privacy Policy</a></li>
 
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <!-- PRIVACY POLICY -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/legal/privacy-policy.php">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+
+                    <!-- TERMS -->
+
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>pages/legal/terms.php">
+                            Terms & Conditions
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -162,6 +260,9 @@
 
         <div class="footer-bottom">
 
+
+            <!-- COPYRIGHT -->
+
             <div class="copyright">
 
                 © 2026 EduVerse. All Rights Reserved.
@@ -170,40 +271,180 @@
 
 
 
+            <!-- SOCIAL MEDIA -->
+
             <div class="footer-social">
 
-                <a href="#">
+                <a href="#" aria-label="Facebook">
+
                     <i class="bi bi-facebook"></i>
+
                 </a>
 
-                <a href="#">
+
+                <a href="#" aria-label="Instagram">
+
                     <i class="bi bi-instagram"></i>
+
                 </a>
 
-                <a href="#">
+
+                <a href="#" aria-label="LinkedIn">
+
                     <i class="bi bi-linkedin"></i>
+
                 </a>
 
-                <a href="#">
+
+                <a href="#" aria-label="YouTube">
+
                     <i class="bi bi-youtube"></i>
+
                 </a>
 
-                <a href="#">
+
+                <a href="#" aria-label="GitHub">
+
                     <i class="bi bi-github"></i>
+
                 </a>
 
             </div>
 
 
 
+            <!-- FOOTER CREDIT -->
+
             <div class="footer-credit">
 
-             💙  Empowering every learner to build a smarter future. 
+                💙 Empowering every learner to build a smarter future.
 
             </div>
 
         </div>
 
+        <!--====================================
+                GIANT WORDMARK
+        =====================================-->
+
+        <div class="footer-giant-wordmark" aria-hidden="true">EduVerse</div>
+
     </div>
 
 </footer>
+
+
+<!--====================================
+        NEWSLETTER TOAST (hidden by default)
+=====================================-->
+
+<div id="newsletterToast" class="newsletter-toast" role="status" aria-live="polite">
+
+    <div class="newsletter-toast-icon">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+    </div>
+
+    <div class="newsletter-toast-text">
+
+        <strong id="newsletterToastTitle">Subscribed!</strong>
+
+        <span id="newsletterToastMessage">You have subscribed successfully.</span>
+
+    </div>
+
+    <button type="button" class="newsletter-toast-close" id="newsletterToastClose" aria-label="Close">
+
+        <i class="bi bi-x-lg"></i>
+
+    </button>
+
+</div>
+
+
+<script>
+(function () {
+
+    const form      = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('newsletterEmail');
+    const btn        = document.getElementById('newsletterBtn');
+    const toast       = document.getElementById('newsletterToast');
+    const toastTitle  = document.getElementById('newsletterToastTitle');
+    const toastMsg    = document.getElementById('newsletterToastMessage');
+    const toastClose  = document.getElementById('newsletterToastClose');
+
+    if (!form) return;
+
+    let hideTimer = null;
+
+    function showToast(success, message) {
+
+        toast.classList.remove('is-success', 'is-error');
+        toast.classList.add(success ? 'is-success' : 'is-error');
+
+        toastTitle.textContent   = success ? 'Subscribed!' : 'Oops!';
+        toastMsg.textContent     = message;
+
+        const icon = toast.querySelector('.newsletter-toast-icon i');
+        icon.className = success ? 'bi bi-check-circle-fill' : 'bi bi-exclamation-circle-fill';
+
+        toast.classList.add('is-visible');
+
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(hideToast, 5000);
+    }
+
+    function hideToast() {
+        toast.classList.remove('is-visible');
+    }
+
+    toastClose.addEventListener('click', hideToast);
+
+    form.addEventListener('submit', function (e) {
+
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+
+        if (!email) {
+            showToast(false, 'Please enter your email address.');
+            emailInput.focus();
+            return;
+        }
+
+        btn.disabled = true;
+        btn.classList.add('is-loading');
+
+        const formData = new FormData();
+        formData.append('email', email);
+
+        fetch('<?php echo BASE_URL; ?>api/newsletter-subscribe.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(function (res) { return res.json().then(function (data) {
+            return { ok: res.ok, data: data };
+        }); })
+        .then(function (result) {
+
+            showToast(result.data.success, result.data.message);
+
+            if (result.data.success) {
+                form.reset();
+            }
+        })
+        .catch(function () {
+            showToast(false, 'Network error — please check your connection and try again.');
+        })
+        .finally(function () {
+            btn.disabled = false;
+            btn.classList.remove('is-loading');
+        });
+    });
+
+})();
+</script>
+
+
+<?php include __DIR__ . '/ai-assistant-widget.php'; ?>

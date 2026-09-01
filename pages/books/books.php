@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../Assets/css/core/animations.css">
     <link rel="stylesheet" href="../../Assets/css/core/utilities.css">
     <!-- Layout -->
+     <?php $activePage = 'books'; ?>
     <link rel="stylesheet" href="../../Assets/css/sidebar.css">
     <link rel="stylesheet" href="../../Assets/css/header.css">
     <link rel="stylesheet" href="../../Assets/css/footer.css">

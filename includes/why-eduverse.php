@@ -186,13 +186,13 @@
 
         </p>
 
-        <a href="#" class="btn-primary">
+         <a href="<?php echo BASE_URL; ?>pages/career-advisor/career-advisor.php"class="btn-primary">
 
             Start Your Journey
             <i class="bi bi-arrow-right"></i>
 
         </a>
- غ
+
     </div>
 
 </section>

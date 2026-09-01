@@ -1,87 +1,65 @@
-<!-- ==========================================
-                HERO SECTION
-========================================== -->
+<!-- ================= HERO VIDEO SECTION ================= -->
 
-<section class="hero">
+<section class="hero-video-section">
 
-    <div class="hero-container">
+    <!-- VIDEO -->
+    <video class="hero-video-bg"
+           autoplay
+           muted
+           loop
+           playsinline>
 
-        <!-- LEFT -->
+        <source src="Assets/videos/eduverse-hero.mp4"  type="video/mp4">
 
-        <div class="hero-left">
+    </video>
 
-            <span class="hero-badge">
 
-                🚀 Future of Learning
+    <!-- DARK OVERLAY -->
+    <div class="hero-video-overlay"></div>
 
+
+    <!-- HERO CONTENT -->
+    <div class="hero-video-content">
+
+        <span class="hero-badge">
+            🚀 Future of Learning
+        </span>
+
+        <h1 class="hero-video-title">
+
+            <span>YOUR LEARNING</span>
+
+            <span class="gradient-word">
+                UNIVERSE
             </span>
 
-           <h1 class="hero-title">
+        </h1>
 
-    <span class="gradient-word">Learn.</span>
+        <p class="hero-video-text">
+            Learn. Explore. Build<br>
+            Your Future.
+        </p>
 
-    <span class="gradient-word">Grow.</span>
+        <div class="hero-video-buttons">
 
-    <span class="gradient-word">Succeed.</span>
+            <a href="pages/courses/courses.php"
+               class="hero-btn hero-btn-primary">
 
-</h1>
-            <p>
+                Explore EduVerse
 
-                Discover top-rated courses, books, institutes,
-                scholarships and career opportunities —
-                all in one premium AI-powered learning platform.
+                <i class="bi bi-arrow-right"></i>
 
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="pages/courses/courses.php"
-                   class="btn-primary">
-
-                    Explore Courses
-
-                    <i class="bi bi-arrow-right"></i>
-
-                </a>
-
-                <a href="pages/books/books.php"
-                   class="btn-secondary">
-
-                    Browse Books
-
-                </a>
-
-            </div>
-
-        </div>
+            </a>
 
 
-        <!-- RIGHT -->
+            <a href="pages/books/books.php"
+               class="hero-btn hero-btn-secondary">
 
-        <div class="hero-right">
+                Explore Books
 
-            <div class="hero-banner">
+                <i class="bi bi-book"></i>
 
-                <div class="banner-placeholder">
-
-                    <i class="bi bi-play-circle-fill"></i>
-
-                    <h3>
-
-                        Animated Banner
-
-                    </h3>
-
-                    <p>
-
-                        Google Flow animation
-                        will be added here later.
-
-                    </p>
-
-                </div>
-
-            </div>
+            </a>
 
         </div>
 

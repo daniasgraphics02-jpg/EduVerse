@@ -1,0 +1,184 @@
+/*=========================================================
+  MAIN HERO LAYOUT WRAPPER
+=========================================================*/
+.courses-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Enhanced vertical separation gap */
+    margin: 20px 0 100px;
+    width: 100%;
+}
+
+/*=========================================================
+  AMPLIFIED ULTRA-PREMIUM TOP HERO CARD 
+=========================================================*/
+.hero-split-grid.prominent-card {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    padding: 56px 64px; /* Extensively scaled up size profile */
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(8, 12, 24, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 32px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.grid-left-col {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Visually wider space between layout blocks */
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    padding-right: 56px;
+}
+
+.grid-right-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-left: 56px;
+}
+
+/* PREMIUM HIGHER-SCALE TYPOGRAPHY */
+.header-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.video-subtitle-premium {
+    font-size: 1.15rem; /* Upgraded subheader presentation sizing */
+    font-weight: 600;
+    color: #38BDF8;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero-split-grid.prominent-card .prominent-title {
+    font-size: 3.2rem; /* Massive, highly prominent typographic focal point */
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 6px 0 12px 0;
+    letter-spacing: -1.2px;
+}
+
+.hero-split-grid.prominent-card .gradient-text-glow {
+    background: linear-gradient(90deg, #38BDF8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+}
+
+.sub-intent-premium {
+    font-size: 1.3rem; /* Enlarged subtitle accent text line */
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    font-weight: 400;
+}
+
+.highlight-purple-glow {
+    color: #c084fc;
+    font-weight: 600;
+}
+
+.description-text-premium {
+    font-size: 1.3rem; /* Matches left baseline copy density perfectly */
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* DYNAMIC GLOW HIGH-IMPACT SVG ICON BADGE */
+.icon-badge.dynamic-glow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px; /* Expanded box shape boundary footprint */
+    height: 76px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 22px;
+    color: #38bdf8;
+    flex-shrink: 0;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/*=========================================================
+  MASSIVE-SCALE PURE CINEMATIC BACKGROUND CANVAS
+=========================================================*/
+.hero-video-frame.ambient-cinematic-banner {
+    position: relative;
+    width: 100%;
+    min-height: 840px; /* Increased to premium movie-screen proportions */
+    border-radius: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.65);
+}
+
+.hero-video-frame.ambient-cinematic-banner .banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-video-frame.ambient-cinematic-banner .banner-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Edge Grading Vignette Shield */
+.hero-video-frame.ambient-cinematic-banner .hero-media-overlay-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(6, 9, 18, 0) 40%, rgba(6, 9, 18, 0.6) 100%),
+                linear-gradient(180deg, rgba(6, 9, 18, 0.1) 0%, rgba(6, 9, 18, 0.4) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/*=========================================================
+  RESPONSIVE TUNING FOR ALL VIEWPORTS
+=========================================================*/
+@media(max-width: 1440px) {
+    .hero-split-grid.prominent-card .prominent-title { font-size: 2.8rem; }
+    .hero-video-frame.ambient-cinematic-banner { min-height: 700px; }
+}
+@media(max-width: 1200px) {
+    .hero-split-grid.prominent-card {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 44px;
+    }
+    .grid-left-col {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 0;
+        padding-bottom: 36px;
+    }
+    .grid-right-col { padding-left: 0; }
+    .hero-video-frame.ambient-cinematic-banner { min-height: 580px; }
+}
+@media(max-width: 768px) {
+    .hero-split-grid.prominent-card { padding: 32px; }
+    .hero-split-grid.prominent-card .prominent-title { font-size: 2.2rem; }
+    .sub-intent-premium, .description-text-premium { font-size: 1.1rem; }
+    .hero-video-frame.ambient-cinematic-banner { min-height: 460px; }
+}

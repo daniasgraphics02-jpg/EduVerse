@@ -1,4 +1,4 @@
-<section class="partner-institutes">
+<section class="courses-institutes">
 
     <div class="container">
 
@@ -10,69 +10,85 @@
             </span>
 
             <h2>
-                Learn From Pakistan's
+                Courses From Pakistan's
                 <span>Leading Institutes</span>
             </h2>
 
             <p>
-                EduVerse collaborates with Pakistan's top educational institutes,
-                helping you discover the right courses for your career goals.
+                Every course on EduVerse comes from one of our partner institutes below.
+                Hit "Explore Courses" to browse all courses and see which institute
+                offers each one.
             </p>
 
         </div>
 
-        <!-- Institutes -->
+        <!-- Institutes (display only, not clickable) -->
 
         <div class="institutes-grid">
 
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/aptech-logo.png" alt="Aptech">
-                <span>Aptech</span>
-            </a>
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/cisco-logo.png" alt="Cisco">
+                <span>Cisco</span>
+            </div>
 
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/Arena Multimedia logo.png" alt="Arena Multimedia">
-                <span>Arena Multimedia</span>
-            </a>
-
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/Al-Khair logo.png" alt="Al-Khair Institute">
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/Al-Khair logo.png" alt="Al-Khair Institute">
                 <span>Al-Khair Institute</span>
-            </a>
+            </div>
 
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/corvit systems logo.png" alt="Corvit Systems">
-                <span>Corvit Systems</span>
-            </a>
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/Arena Multimedia logo.png" alt="Arena Multimedia">
+                <span>Arena Multimedia</span>
+            </div>
 
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/Omni-Academy-Logo.png" alt="Omni Academy">
-                <span>Omni Academy</span>
-            </a>
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/aptech-logo.png" alt="Aptech">
+                <span>Aptech</span>
+            </div>
 
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/sylani mass institute.png" alt="Saylani Mass IT">
-                <span>Saylani Mass IT</span>
-            </a>
-
-            <a href="categories.php" class="institute">
-                <img src="Assets/images/bano-qabil.png" alt="Bano Qabil">
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/bano-qabil.png" alt="Bano Qabil">
                 <span>Bano Qabil</span>
-            </a>
+            </div>
+
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/sylani mass institute.png" alt="Saylani Mass IT">
+                <span>Saylani Mass IT</span>
+            </div>
+
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/jdc-logo.png" alt="JDC">
+                <span>JDC</span>
+            </div>
+
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/ned-academy-logo.png" alt="NED Academy">
+                <span>NED Academy</span>
+            </div>
+
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/vu-logo.png" alt="Udemy">
+                <span>Udemy</span>
+            </div>
+
+            <div class="institute">
+                <img src="<?php echo BASE_URL; ?>Assets/images/coursera-logo.webp" alt="Coursera">
+                <span>Coursera</span>
+            </div>
 
         </div>
 
+        
         <!-- Button -->
 
         <div class="partner-btn">
 
-            <a href="categories.php" class="explore-btn">
+            <a href="<?php echo BASE_URL; ?>pages/institutes/institutes.php" class="explore-btn">
                 View Categories
                 <span>→</span>
             </a>
 
         </div>
-
     </div>
 
 </section>

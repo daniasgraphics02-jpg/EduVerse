@@ -1,255 +1,740 @@
-/* =====================================
-            EduVerse Header
-===================================== */
+/*=========================================================
+  EDUVERSE HEADER
+=========================================================*/
 
-.header{
+/*
+    IMPORTANT:
+
+    Sidebar width = 268px
+
+    Therefore header starts at 268px instead of 0.
+*/
+
+
+.main-header {
 
     position: fixed;
-    top: 15px;
-    left: 310px;
-    right: 15px;
 
-    height: 75px;
+    top: 0;
+    left: 268px;
+    right: 0;
+
+    width: auto;
+
+    height: 94px;
 
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
 
-    padding: 0 28px;
+    justify-content: space-between;
 
-    background: var(--sidebar-color);
+    gap: 30px;
 
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
+    padding: 0 42px;
 
-    box-shadow: var(--shadow);
+    background: rgba(5, 12, 30, 0.96);
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
 
     z-index: 1000;
 
+}
+
+
+/*=========================================================
+  SEARCH BAR
+=========================================================*/
+
+.header-search {
+
+    width: 100%;
+
+    max-width: 610px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 18px;
+
+    border-radius: 11px;
+
+    background: rgba(8, 15, 36, 0.72);
+
+    border: 1px solid rgba(148, 163, 184, 0.20);
+
+    transition: all .3s ease;
+
+}
+
+
+.header-search:focus-within {
+
+    border-color: rgba(124, 58, 237, 0.65);
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.08),
+        0 0 25px rgba(124, 58, 237, 0.12);
+
+}
+
+
+.header-search i {
+
+    color: #CBD5E1;
+
+    font-size: 20px;
+
+}
+
+
+.header-search input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+}
+
+
+.header-search input::placeholder {
+
+    color: #94A3B8;
+
+}
+
+
+/*=========================================================
+  SEARCH SUBMIT BUTTON
+  (was a plain icon in a div — now a real submit button,
+  reset to look identical to before)
+=========================================================*/
+
+.header-search button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-search button i {
+    color: #CBD5E1;
+    font-size: 20px;
+}
+
+
+/*=========================================================
+  HEADER RIGHT
+=========================================================*/
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-shrink: 0;
+
+}
+
+
+/*=========================================================
+  NOTIFICATION BUTTON
+=========================================================*/
+
+.header-icon {
+
+    position: relative;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #E2E8F0;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+}
+
+
+.header-icon:hover {
+
+    color: #A855F7;
+
+    background: rgba(124, 58, 237, 0.10);
+
+}
+
+
+/*=========================================================
+  NOTIFICATION BADGE
+  (plain dot now — no number shown)
+=========================================================*/
+
+.notification-badge {
+
+    position: absolute;
+
+    top: 8px;
+
+    right: 8px;
+
+    width: 10px;
+
+    height: 10px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #A855F7,
+            #7C3AED
+        );
+
+    color: transparent;
+
+    font-size: 0;
+
+    border: 2px solid #050C1E;
+
+}
+
+
+/*=========================================================
+  LOGIN / REGISTER
+=========================================================*/
+
+.auth-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.login-nav-btn,
+.reg-nav-btn {
+
+    min-height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 8px 19px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all .3s ease;
+
+}
+
+
+/* LOGIN */
+
+.login-nav-btn {
+
+    color: #38BDF8;
+
+    background: transparent;
+
+    border: 1px solid #38BDF8;
+
+}
+
+
+.login-nav-btn:hover {
+
+    background: #38BDF8;
+
+    color: #ffffff;
+
+}
+
+
+/* REGISTER */
+
+.reg-nav-btn {
+
+    color: #ffffff;
+
+    border: 1px solid #7C3AED;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #4F46E5
+        );
+
+}
+
+
+.reg-nav-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, 0.35);
+
+}
+
+
+/*=========================================================
+  USER PROFILE
+=========================================================*/
+
+.user-profile-dropdown {
+
+    position: relative;
+
+}
+
+
+.user-profile-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 6px 4px 6px 8px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+}
+
+
+.user-profile-btn:hover {
+
+    background: rgba(255, 255, 255, 0.05);
+
+}
+
+
+/*=========================================================
+  AVATAR
+=========================================================*/
+
+.profile-avatar {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #7C3AED;
+
+    box-shadow:
+        0 0 15px rgba(124, 58, 237, 0.25);
+
+}
+
+
+/*=========================================================
+  PROFILE INFO
+=========================================================*/
+
+.profile-info {
+
+    min-width: 115px;
+
+    text-align: left;
+
+}
+
+
+.profile-info h4 {
+
+    max-width: 160px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #F8FAFC;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.profile-info p {
+
+    margin: 3px 0 0;
+
+    color: #94A3B8;
+
+    font-size: 12px;
+
+}
+
+
+/*=========================================================
+  PROFILE ARROW
+=========================================================*/
+
+.profile-arrow {
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+
+    margin-left: 2px;
+
+    transition: transform .3s ease;
+
+}
+
+
+.user-profile-dropdown.active
+.profile-arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+/*=========================================================
+  PROFILE DROPDOWN
+=========================================================*/
+
+.profile-dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 190px;
+
+    padding: 7px 0;
+
+    border-radius: 12px;
+
+    background: #111A31;
+
+    border: 1px solid rgba(148, 163, 184, 0.15);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
     transition:
-    left .35s ease,
-    width .35s ease,
-    background-color .35s ease;
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    z-index: 2000;
 
 }
 
-/* Header when sidebar is collapsed */
 
-.header.expanded{
+.user-profile-dropdown.active
+.profile-dropdown-menu {
 
-    left:125px;
+    opacity: 1;
 
-}
+    visibility: visible;
 
-/* ==============================
-        Search Bar
-================================ */
-
-.header-search{
-
-    width:500px;
-    height:48px;
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    padding:0 18px;
-
-    background:#161F35;
-
-    border:1px solid transparent;
-    border-radius:14px;
-
-     transition:
-    left .35s ease,
-    width .35s ease,
-    background-color .35s ease;
+    transform: translateY(0);
 
 }
 
-.header-search:hover{
 
-    border-color:#38BDF8;
+/*=========================================================
+  DROPDOWN ITEMS
+=========================================================*/
 
-}
+.profile-dropdown-item {
 
-.header-search:focus-within{
-    border-color:#38BDF8;
-    box-shadow:0 0 15px rgba(56,189,248,.25);
-}
+    display: flex;
 
-.header-search i{
-    color:#94A3B8;
-    font-size:18px;
-}
+    align-items: center;
 
-.header-search input{
-    flex:1;
+    gap: 11px;
 
-    border:none;
-    outline:none;
+    padding: 12px 16px;
 
-    background:transparent;
+    color: #E2E8F0;
 
-    color:#FFFFFF;
+    text-decoration: none;
 
-    font-size:15px;
+    font-size: 13px;
+
+    transition: all .25s ease;
 
 }
 
-.header-search input::placeholder{
 
-    color:#7B879C;
+.profile-dropdown-item i {
 
-}
+    width: 18px;
 
-/*  Right Side */
-
-.header-right{
-
-    display:flex;
-    align-items:center;
-    gap:18px;
+    color: #94A3B8;
 
 }
 
-/* Notification */
 
-.header-icon{
+.profile-dropdown-item:hover {
 
-    position:relative;
+    background: rgba(124, 58, 237, 0.10);
 
-    width:46px;
-    height:46px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:#161F35;
-
-    border:1px solid var(--border-color);
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-     transition:
-    left .35s ease,
-    width .35s ease,
-    background-color .35s ease;
-}
-
-.header-icon:hover{
-
-    transform:translateY(-2px);
-    border-color:#38BDF8;
-    box-shadow:0 0 12px rgba(56,189,248,.25);
-}
-
-.header-icon i{
-    color:#C2EAFD;
-    font-size:20px;
-}
-
-/* Notification Dot */
-
-.notification-badge{
-
-    position:absolute;
-
-    top:10px;
-    right:11px;
-
-    width:8px;
-    height:8px;
-
-    background:#FF3B5C;
-
-    border-radius:50%;
+    color: #A855F7;
 
 }
 
-/* Profile*/
 
-.profile{
+.profile-dropdown-item:hover i {
 
-    display:flex;
-    align-items:center;
-    gap:14px;
-
-    padding:8px 14px;
-
-    background:#161F35;
-
-    border:1px solid var(--border-color);
-    border-radius:14px;
-
-    cursor:pointer;
-
-     transition:
-    left .35s ease,
-    width .35s ease,
-    background-color .35s ease;
-
+    color: #A855F7;
 
 }
 
-.profile:hover{
 
-    border-color:#38BDF8;
+/*=========================================================
+  DROPDOWN DIVIDER
+=========================================================*/
 
-    box-shadow:0 0 15px rgba(56,189,248,.25);
+.dropdown-divider {
 
-}
+    height: 1px;
 
-.profile img{
+    margin: 5px 10px;
 
-    width:42px;
-    height:42px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:2px solid #3B82F6;
+    background: rgba(255, 255, 255, 0.08);
 
 }
 
-.profile-info{
 
-    display:flex;
-    flex-direction:column;
+/*=========================================================
+  LOGOUT
+=========================================================*/
 
-}
+.profile-dropdown-item.logout-item {
 
-.profile-info h4{
-
-    font-size:15px;
-    color:#FFFFFF;
-
-    font-weight:600;
+    color: #EF4444;
 
 }
 
-.profile-info p{
-    font-size:12px;
-    color:#94A3B8;
+
+.profile-dropdown-item.logout-item i {
+
+    color: #EF4444;
 
 }
 
-.profile .bi-chevron-down{
-    color:#94A3B8;
 
-    transition:
-    left .35s ease,
-    width .35s ease,
-    background-color .35s ease;
+.profile-dropdown-item.logout-item:hover {
 
+    background: rgba(239, 68, 68, 0.10);
+
+    color: #EF4444;
 
 }
 
-.profile:hover .bi-chevron-down{
-    transform:rotate(180deg);
+
+/*=========================================================
+  TABLET
+=========================================================*/
+
+@media (max-width: 1100px) {
+
+    .main-header {
+
+        left: 95px;
+
+        padding: 0 25px;
+
+    }
+
+
+    .header-search {
+
+        max-width: 480px;
+
+    }
+
+}
+
+
+/*=========================================================
+  MOBILE
+=========================================================*/
+
+@media (max-width: 768px) {
+
+    .main-header {
+
+        left: 0;
+
+        height: 70px;
+
+        padding: 0 15px;
+
+    }
+
+
+    .header-search {
+
+        max-width: none;
+
+        height: 42px;
+
+    }
+
+
+    .header-right {
+
+        gap: 5px;
+
+    }
+
+
+    .profile-info,
+    .profile-arrow {
+
+        display: none;
+
+    }
+
+
+    .profile-avatar {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+}
+
+
+/*=========================================================
+  SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 520px) {
+
+    .header-search {
+
+        max-width: 200px;
+
+    }
+
+
+    .header-search input {
+
+        font-size: 12px;
+
+    }
+
+
+    .header-search i {
+
+        font-size: 16px;
+
+    }
+
+
+    .login-nav-btn,
+    .reg-nav-btn {
+
+        padding: 7px 10px;
+
+        font-size: 11px;
+
+    }
+
+
+    .header-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
 }

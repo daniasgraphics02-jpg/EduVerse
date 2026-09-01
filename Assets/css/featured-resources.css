@@ -118,6 +118,8 @@
 
     position:absolute;
 
+    pointer-events:none;
+
     width:260px;
 
     height:260px;
@@ -150,6 +152,8 @@
 .resource-card::after{
 
     content:"";
+
+    pointer-events:none;
 
     position:absolute;
 
